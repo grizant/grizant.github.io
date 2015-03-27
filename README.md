@@ -1,1 +1,0 @@
-# Grant Schissler Personal Website and Statistics Blog
