@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Org-mode -> Jekyll -> GitHub Blog Workflow | A. Grant Schissler</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="keywords" content="data analysis, statistics, visualization, R, programming" />
+        <meta name="author" content="Grant Schissler" />
+        <meta name="description" content="Website of A. Grant Schissler, Data Scientist" />
+        <meta name="viewport" content="width=640px, initial-scale=1.0, maximum-scale=1.0">	
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/images/sigma.jpg">
+        <!-- Google Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,600" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen, projection" />
+	</head>
+	<body>
+
+
+		<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="header-page">
+
+<h1><a href="/">A. Grant Schissler</a></h1>
+<div id="nav">
+	<ul>
+		<li><a href="/work" class="">Work</a></li>
+		<li><a href="/teaching" class="">Teaching</a></li>
+		<li><a href="/blog" class="current">Blog</a></li>		
+		<li><a href="/about" class="">About</a></li>
+	</ul>
+</div>
+
+</div>
+
+
+<div class="clear"></div>
+
+<div id="block">
+	<div class="prose"> 
+	<div class="post">
+	<h1> Org-mode -> Jekyll -> GitHub Blog Workflow </h1>
+	<!-- <span class="date">Posted on 10 Apr 2015</span> -->
+	<h5>Posted on April 10, 2015</h5>
+	
+	<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction &amp; References</a></li>
+<li><a href="#sec-2">2 Install Jekyll</a></li>
+<li><a href="#sec-3">3 Project Directory Structure</a></li>
+<li><a href="#sec-4">4 Config org mode</a></li>
+<li><a href="#sec-5">5 Write post.org</a></li>
+<li><a href="#sec-6">6 Publish post.html</a></li>
+<li><a href="#sec-7">7 Move files and place on web server</a></li>
+<li><a href="#sec-8">8 Enjoy!</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Introduction &amp; References</h2>
+<div class="outline-text-2" id="text-1">
+
+<p><a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">Ian Barton's worg post</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Install Jekyll</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Project Directory Structure</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Config org mode</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+
+<pre class="example">;; Org Publish to Stat Blog to Jekyll config Added 26 Mar 2015
+;; http://orgmode.org/worg/org-tutorials/org-jekyll.html
+;; Thanks to Ian Barton
+(setq org-publish-project-alist
+      '(
+
+  ("org-grizant"
+          ;; Path to your org files.
+          :base-directory "~/Dropbox/GitHubPage/orgFiles-stat-blog/"
+          :base-extension "org"
+
+          ;; Path to your Jekyll project.
+          :publishing-directory "~/Dropbox/GitHubPage/jekyll/"
+          :recursive t
+          :publishing-function org-publish-org-to-html
+          :headline-levels 4 
+          :html-extension "html"
+          :body-only t ;; Only export section between &lt;body&gt; &lt;/body&gt;
+    )
+
+
+    ("org-static-grizant"
+          :base-directory "~/Dropbox/GitHubPage/orgFiles-stat-blog/"
+          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
+          :publishing-directory "~/Dropbox/GitHubPage/"
+          :recursive t
+          :publishing-function org-publish-attachment)
+
+    ("grizant" :components ("org-grizant" "org-static-grizant"))
+
+))
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Write post.org</h2>
+<div class="outline-text-2" id="text-5">
+
+
+
+
+<pre class="example">#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_HTML
+---
+layout: default
+title: Benighted on the Ben.
+excerpt: An unplanned bivouac on Ben Nevis.
+---
+It was early January when six of us travelled up to ....
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">Publish post.html</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>To export <code>C-c e X grizant</code>.
+</p>
+<p>
+You can view by <code>jekyll serve</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7">Move files and place on web server</h2>
+<div class="outline-text-2" id="text-7">
+
+
+<p>
+From .bashrc:
+</p>
+
+
+
+<pre class="example"># easy git push
+gitpush()
+{
+git add --all &amp;&amp; git commit -m "$1" &amp;&amp; git push -u origin master
+}
+
+# copy _site files from jekyll to web server and push
+pubsite()
+{
+cd ~/Dropbox/GitHubPage/grizant.github.io &amp;&amp; rm -rf !(.git|.gitignore|LICENSE.md|README.md) &amp;&amp; rsync -rvt ~/Dropbox/GitHubPage/jekyll/_site/* ~/Dropbox/GitHubPage/grizant.github.io/. &amp;&amp; gitpush "$1"
+}
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8">Enjoy!</h2>
+<div class="outline-text-2" id="text-8">
+
+</div>
+</div>
+
+
+</div>
+
+<hr>
+<p></p>
+
+<div class="meta">
+	
+	
+	<span class="categories">
+		Published in categories
+		
+	</span>
+	
+	
+	
+	<span class="tags">
+		Tagged with 
+		
+	</span>
+	
+</div>
+
+
+<div class="previous_next">
+	
+	  <a href="/blog/stat/2015/03/26/my-first-post.html" title="Previous post">&larr; previous</a>
+	
+	&nbsp;&nbsp;
+	
+	<br>
+	<p>
+	<a class="greenbutton" href="/blog/archive/" title="an archive of all posts">See all posts &rarr;</a>
+	</p>
+</div>
+
+	</div>
+</div>
+
+
+<div id="footer">
+
+<div id="footer">
+	&copy; <a href="/">A. Grant Schissler</a>. All contents under 
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
+	unless otherwise noted.
+	<br/><br/>
+</div>
+
+
+</div>
+
+
+
+
+		<!-- Google Analytics -->
+		<script>
+  		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  	  ga('create', 'UA-46765288-1', 'gastonsanchez.com');
+  		  ga('send', 'pageview');
+
+		</script>
+		<!-- Google Analytics end -->
+
+	</body>
+</html>
