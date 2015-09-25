@@ -225,7 +225,7 @@ git add --all &amp;&amp; git commit -m "$1" &amp;&amp; git push -u origin master
 # copy _site files from jekyll to web server and push
 pubsite()
 {
-cd ~/Dropbox/GitHubPage/grizant.github.io &amp;&amp; rm -rf !(.git|.gitignore|LICENSE.md|README.md) &amp;&amp; rsync -rvt ~/Dropbox/GitHubPage/jekyll/_site/* ~/Dropbox/GitHubPage/grizant.github.io/. &amp;&amp; gitpush "$1"
+cd ~/Dropbox/GitHubPage/grizant.github.io &amp;&amp; rm -rf !(.git|.gitignore|LICENSE.md|README.md|CNAME) &amp;&amp; rsync -rvt ~/Dropbox/GitHubPage/jekyll/_site/* ~/Dropbox/GitHubPage/grizant.github.io/. &amp;&amp; gitpush "$1"
 }
 </pre>
 
