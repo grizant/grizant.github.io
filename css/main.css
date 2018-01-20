@@ -57,6 +57,7 @@
 
 .header-page #nav li a {
     display: flex;
+    white-space: nowrap;
     padding: 15px 0px 0px 0px;
     text-decoration: none;
 	color: #555; 
