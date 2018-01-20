@@ -18,7 +18,7 @@
 }
 
 .header-page h1 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: normal;
   margin: 0;
   padding: 10px 0 10px 0;
@@ -52,12 +52,12 @@
 
 .header-page #nav li {
     display: inline-block;
-	font-size: 1em;
+	font-size: 0.95em;
 }
 
 .header-page #nav li a {
-    display: block;
-    padding: 10px 0px 0px 0px;
+    display: flex;
+    padding: 15px 0px 0px 0px;
     text-decoration: none;
 	color: #555; 
 }
