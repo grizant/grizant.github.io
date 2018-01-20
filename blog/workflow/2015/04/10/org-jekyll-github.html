@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Org-mode -> Jekyll -> GitHub Blog Workflow | A. Grant Schissler</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="keywords" content="data analysis, statistics, visualization, R, programming, informatics" />
+        <meta name="author" content="Grant Schissler" />
+        <meta name="description" content="Website of A. Grant Schissler, Statistical Informatician" />
+        <meta name="viewport" content="width=640px, initial-scale=1.0, maximum-scale=1.0">	
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/images/sigma.jpg">
+        <!-- Google Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,600" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen, projection" />
+	</head>
+	<body>
+
+
+		<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="header-page">
+
+<h1><a href="/">A. Grant Schissler</a></h1>
+<div id="nav">
+	<ul>
+		<li><a href="/work" class="current">Work</a></li>
+		<li><a href="/teaching" class="">Teaching</a></li>
+		<li><a href="/CV" class="">CV</a></li>		
+		<li><a href="/blog" class="current">Blog</a></li>		
+		<li><a href="/about" class="">About</a></li>
+	</ul>
+</div>
+
+</div>
+
+
+<div class="clear"></div>
+
+<div id="block">
+	<div class="prose"> 
+	<div class="post">
+	<h1> Org-mode -> Jekyll -> GitHub Blog Workflow </h1>
+	<!-- <span class="date">Posted on 10 Apr 2015</span> -->
+	<h5>Posted on April 10, 2015</h5>
+	
+	<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction &amp; Resources</a></li>
+<li><a href="#sec-2">2 Install Jekyll</a></li>
+<li><a href="#sec-3">3 Project Directory Structure</a></li>
+<li><a href="#sec-4">4 Configure org mode</a></li>
+<li><a href="#sec-5">5 Write post.org</a></li>
+<li><a href="#sec-6">6 Publish post.html</a></li>
+<li><a href="#sec-7">7 Move files and place on web server</a></li>
+<li><a href="#sec-8">8 Enjoy and happy blogging!</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Introduction &amp; Resources</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>First, let me say that I love <a href="https://www.gnu.org/software/emacs/">Emacs</a> and, especially, <a href="http://orgmode.org/">org mode</a> in Emacs. I use org mode for organization and to enable literate programming of data analytics. For some time I have intended to build a personal website with blog integration. Of course, the design would feature org mode's ability to export html markup. After exploring other geeks' blogs for a while, I found Gaston Sanchez's <a href="http://gastonsanchez.com">website</a> which led me to discover <a href="http://jekyllrb.com/">jekyll</a>. Jekyll is a ruby program that "transforms plain text into static websites and blogs." Basically, Jekyll prettifies your favorite markup(-down) file and additionally maintains a nice blogging structure. Finally, to publish on the web, I decided on <a href="https://pages.github.com/#user-site">GitHub pages</a> because git is awesome and it is free.
+</p>
+<p>
+Full disclaimer: Almost of all this information is provided in <a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">Ian Barton's worg post</a>. I have left out many of the details; so an interested reader should go to Ian's post and the jekyll site. Essentially, I just created a website (by created I mean shamefully grabbed Gaston Sanchez's site with <b>plans</b> to customize) and wanted the first informative post to help me remember what I did. That being said, I did insert a full tweeks that may have some added value to the original post.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Install Jekyll</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>Assuming that you have a working org mode and an active <a href="https://github.com/">GitHub</a> account, all you need to install is <a href="http://jekyllrb.com/">jekyll</a> via the instructions on the linked page.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Project Directory Structure</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>My project directory setup differs a bit from the one described in Ian's worg post. It is a bit more complex to allow for a little more control over the jekyll staging area and what exactly gets published on the github repo. I am only listing the key files and folders.
+</p>
+
+
+
+<pre class="example">'|GitHubPage
+'|  |grizant.github.io
+'|  |jekyll
+'|  -- _config.yml
+'|  -- |_posts
+'|   -- 2015-03-26-my-first-post.html
+'|   -- ...
+'|  -- |_layouts
+'|   -- default.html
+'|   -- post.html
+'|   -- ...
+'|  -- |_site
+'|   -- ...
+'|  |orgFiles-stat-blog
+'|  -- |_posts
+'|   -- 2015-03-26-my-first-post.org
+'|   -- ...
+</pre>
+
+
+<p>
+The <code>grizant.github.io</code> directory houses the files to be pushed to the web server (through GitHub pages). The <code>jekyll</code> directory is under Jekyll control. A completely self-contained version of the site resides in the <code>_site</code> subdirectory in <code>jekyll</code>. The contents of the <code>_site</code> directory is copied to the github.io directory; thus the <code>_site</code> directiory is simply a staging area (more on this aspect later). <code>orgFiles-stat-blog</code> mirrors the structure of the <code>jekyll</code> directory so that files under the <code>_posts</code> directory will be properly located when the org mode file is published to html. Note the <code>jekyll/_layouts</code> provides much of the prettification of mentioned earlier.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Configure org mode</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>Next, configure org mode to publish an org mode blog post file as html for this specific project, <i>grizant</i>, add the following lines to your <code>.emacs</code> or <code>init.el</code>. 
+</p>
+
+
+
+<pre class="example">;; Org Publish to Stat Blog to Jekyll config Added 26 Mar 2015
+;; http://orgmode.org/worg/org-tutorials/org-jekyll.html
+;; Thanks to Ian Barton
+(setq org-publish-project-alist
+   '(
+ ("org-grizant"
+     ;; Path to your org files.
+     :base-directory "~/Dropbox/GitHubPage/orgFiles-stat-blog/"
+     :base-extension "org"
+
+     ;; Path to your Jekyll project.
+     :publishing-directory "~/Dropbox/GitHubPage/jekyll/"
+     :recursive t
+     :publishing-function org-publish-org-to-html
+     :headline-levels 4 
+     :html-extension "html"
+     :body-only t ;; Only export section between &lt;body&gt; &lt;/body&gt;
+  )
+
+  ("org-static-grizant"
+     :base-directory "~/Dropbox/GitHubPage/orgFiles-stat-blog/"
+     :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
+     :publishing-directory "~/Dropbox/GitHubPage/"
+     :recursive t
+     :publishing-function org-publish-attachment)
+
+  ("grizant" :components ("org-grizant" "org-static-grizant"))
+
+))
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Write post.org</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>Now you can create a blog post with all the nice features of org mode with Jekyll <i>front matter</i> in the <code>orgFiles-stat-blog</code> directory. Note that the Jekyll layout <i>post</i> is critical to maintaining the blog functionality and uniform appearance.
+</p>
+
+
+
+<pre class="example">#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_HTML
+---
+layout: post
+title: "Org-mode -&gt; Jekyll -&gt; GitHub Blog Workflow"
+date: 2015-04-10
+excerpt: This post describes my blogging workflow...
+---
+
+insert text
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">Publish post.html</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>While writing the post in post.org, you may publish using org export using <code>C-c e X grizant</code> (or your project name). This exports post.org and places in the correct jekyll directory. You can monitor your progress using <code>jekyll serve</code> prior to placing on the web server.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7">Move files and place on web server</h2>
+<div class="outline-text-2" id="text-7">
+
+<p>Finally, move your newly developed <code>jekyll/_site</code> to the web server and commit the changes. I wrote a couple of shell functions to streamline this process.  
+</p>
+<p>
+From my .bashrc:
+</p>
+
+
+
+<pre class="example"># easy git push
+gitpush()
+{
+git add --all &amp;&amp; git commit -m "$1" &amp;&amp; git push -u origin master
+}
+
+# copy _site files from jekyll to web server and push
+pubsite()
+{
+cd ~/Dropbox/GitHubPage/grizant.github.io &amp;&amp; rm -rf !(.git|.gitignore|LICENSE.md|README.md|CNAME) &amp;&amp; rsync -rvt ~/Dropbox/GitHubPage/jekyll/_site/* ~/Dropbox/GitHubPage/grizant.github.io/. &amp;&amp; gitpush "$1"
+}
+</pre>
+
+
+<p>
+For example to publish and push this post, I used
+</p>
+
+
+
+<pre class="example">pubsite "org jekyll github post 1"
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8">Enjoy and happy blogging!</h2>
+<div class="outline-text-2" id="text-8">
+
+</div>
+</div>
+
+
+</div>
+
+<hr>
+<p></p>
+
+<div class="meta">
+	
+	
+	<span class="categories">
+		Published in categories
+		
+		<a href="http://localhost:4000/blog/categories/#workflow" title="workflow">workflow</a>&nbsp;
+		
+	</span>
+	
+	
+	
+	<span class="tags">
+		Tagged with 
+		
+		<a href="http://localhost:4000/blog/tags/#org" title="org">org</a>&nbsp;
+		
+		<a href="http://localhost:4000/blog/tags/#jekyll" title="jekyll">jekyll</a>&nbsp;
+		
+		<a href="http://localhost:4000/blog/tags/#bash" title="bash">bash</a>&nbsp;
+		
+	</span>
+	
+</div>
+
+
+<div class="previous_next">
+	
+	  <a href="/blog/stat/2015/03/26/my-first-post.html" title="Previous post">&larr; previous</a>
+	
+	&nbsp;&nbsp;
+	
+	<br>
+	<p>
+	<a class="greenbutton" href="/blog/archive/" title="an archive of all posts">See all posts &rarr;</a>
+	</p>
+</div>
+
+	</div>
+</div>
+
+
+<div id="footer">
+
+<div id="footer">
+	&copy; <a href="/">A. Grant Schissler</a>. All contents under 
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
+	unless otherwise noted.
+	<br/><br/>
+</div>
+
+
+</div>
+
+
+
+
+		<!-- Google Analytics -->
+		<script>
+  		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  	  ga('create', 'UA-46765288-1', www.grantschissler.com');
+  		  ga('send', 'pageview');
+
+		</script>
+		<!-- Google Analytics end -->
+
+	</body>
+</html>
