@@ -13,16 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: A. Grant Schissler, Statistical Informatician
+email: aschissler@unr.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  You've found my homepage. I'm an Assistant Professor of Statistics in the Department of Mathematics & Statistics at the University of Nevada, Reno. My research interests are driven by interdisciplinary problems, often in the biomedical domain. Recently, I've help to build statistical informatics tools that allow clinical researchers to interpret molecular data, on the scale of individual patients (aiming to conduct precision medicine). Common themes in the course of these projects include large-scale hypothesis testing, high dimensionality, massively-parallel computing (including GPU acceleration), knowledgebase integration, multivariate statistics, Bayesian analysis, and clustering.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "" # the base hostname & protocol for your site, e.g. http://www.grantschissler.com
+twitter_username: GSchissler
+github_username:  grizant
 
 # Build settings
 markdown: kramdown
