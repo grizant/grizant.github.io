@@ -29,6 +29,8 @@ markdown: kramdown
 theme: minima
 # theme: jekyll-theme-architect
 # theme: jekyll-theme-hacker
+# theme: minimal-mistakes-jekyll
+# remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
 
