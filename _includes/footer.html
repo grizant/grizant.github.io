@@ -22,6 +22,13 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
+	  {% if site.google_scholar_username %}
+	  <li>
+	    <a href="https://scholar.google.com/citations?user={{ site.google_scholar_username }}&hl=en">
+	      <i class="ai ai-google-scholar-square ai-2x"></i> Scholar
+	    </a>
+	  </li>
+	  {% endif %}
           {% if site.github_username %}
           <li>
             {% include icon-github.html username=site.github_username %}
@@ -36,7 +43,7 @@
 	  {% if site.linkedin_username %}
 	  <li>
 	    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
-	      <i class="fa fa-linkedin"></i> grantschissler
+	      <i class="fa fa-linkedin"></i> LinkedIn
 	    </a>
 	  </li>
 	  {% endif %}

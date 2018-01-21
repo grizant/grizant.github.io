@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: A. Grant Schissler, Statistician
-email: aschissler@unr.edu
+email: aschissler at unr dot edu
 description: >- # this means to ignore newlines until "baseurl:"
   You've found my homepage. I'm an Assistant Professor of Statistics in the Department of Mathematics & Statistics at the University of Nevada, Reno. My research interests are driven by interdisciplinary problems, often in the biomedical domain. Recently, I've help to build statistical informatics tools that allow clinical researchers to interpret molecular data, on the scale of individual patients (aiming to conduct precision medicine). Common themes in the course of these projects include large-scale hypothesis testing, high dimensionality, massively-parallel computing (including GPU acceleration), knowledgebase integration, multivariate statistics, Bayesian analysis, and clustering.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -22,6 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://www.grantschis
 twitter_username: GSchissler
 github_username:  grizant
 linkedin_username: grantschissler
+google_scholar_username: 1H-SHoMAAAAJ
 
 # Build settings
 markdown: kramdown
