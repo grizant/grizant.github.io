@@ -18,9 +18,22 @@ exclude: true
 # Schedule (subject to change and will be updated regularly)
 For other important dates see the UNR [Spring 2018 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#Spring2018){:target="_blank"}
 
-
-
-
-
-
-
+| Week | Tuesday | Thursday| Notes |
+|---|---|---|---|
+| 1: Jan 23, Jan 25 | Syllabus, Introduction | Stats Modeling Overview| Slides:<br/>[Prob-distributions.pdf](prob-distributions.pdf) |
+| 2: Jan 31, Feb 1 | Data and Graphics in R<br/> R Markdown <br/> | Data and Graphics in R <br/>Prob. & Statistics Review|Slides:<br/> Other:|
+| 3: Feb 6, Feb 8 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 4: Feb 13, Feb 15 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 5: Feb 20, Feb 22 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 6: Feb 27, Mar 1 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 7: Mar 6, Mar 8 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 8: Mar 13, Mar 15 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 9: Mar 20, Mar 22 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 10: Mar 27, Mar 29 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 11: Apr 3, Apr 5 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 12: Apr 10, Apr 12 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 13: Apr 17, Apr 19 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 14: Apr 24, Apr 26 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 15: May 1, 3 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 16: May 8, 10 | Topic1<br/> Topic2 <br/> | Topic1 <br/>Topic2 |Slides:<br/> Other: |
+| 17: May 15 | **Final project presentations<br/>7:30am--9:30am** | No class |Rubric: |
