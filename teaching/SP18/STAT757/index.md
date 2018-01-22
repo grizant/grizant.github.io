@@ -8,6 +8,7 @@ exclude: true
 
 - Lectures: 9:00am-10:15am, Tues & Thurs, 23 Jan - 15 May, 2018 in [DMS](http://www.unr.edu/around-campus/facilities/davidson){:target="_blank"} 106 ([map](https://www.google.com/maps/place/Davidson+Mathematics+%26+Science+Center,+Reno,+NV+89557){:target="_blank"})
 - Syllabus: Click [here to download (PDF)](STAT_757_syllabus_Spring2018_Schissler.pdf){:target="_blank"}.
+- Gradebook: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: *A Modern Approach to Regression with R*, by S. Sheather.
 - Text Website: [www.stat.tamu.edu/~sheather/book/](http://www.stat.tamu.edu/~sheather/book/){:target="_blank"}
 - Office Hours: TBD or by appointment in 224 DMSC
