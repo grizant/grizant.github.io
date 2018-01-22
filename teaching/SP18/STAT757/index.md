@@ -13,12 +13,13 @@ exclude: true
 - Office Hours: TBD or by appointment in 224 DMSC
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT757](https://github.com/grizant/STAT757){:target="_blank"}
 
-# Relevant general resources
-- R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/). (Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not supported during instruction.)
-- See [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/)
-- and/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/).
-- R Markup Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com)
-- Check my [resources page] for more useful information
+# Course tools and information
+- In DMSC 106, the computers will have all the software installed.<br/>(Please install on your personal machines as needed.)
+- R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
+- See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/) for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/).
+- Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com)
+- RStudio cheatsheets (these are all great): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
+- Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
 # Schedule (subject to change and will be updated regularly)
 For other important dates see the UNR [Spring 2018 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#Spring2018){:target="_blank"}
