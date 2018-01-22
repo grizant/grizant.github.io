@@ -16,9 +16,9 @@ exclude: true
 # Course tools and information
 - In DMSC 106, the computers will have all the software installed.<br/>(Please install on your personal machines as needed.)
 - R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
-- See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/) for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/).
-- Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com)
-- RStudio cheatsheets (these are all great): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
+- See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/){:target="_blank"} for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/){:target="_blank"}.
+- Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com){:target="_blank"}
+- RStudio cheatsheets (many are highly useful): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
 # Schedule (subject to change and will be updated regularly)
@@ -26,7 +26,7 @@ For other important dates see the UNR [Spring 2018 Calendar](https://www.unr.edu
 
 | Week | Tuesday | Thursday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Jan 23, 25 | Syllabus, Introduction <br/> Blended Instruction| Stats Modeling Overview<br/>Generating fake data in R| Slides:<br/>[Prob-distributions.pdf](prob-distributions.pdf) |
+| **1**: Jan 23, 25 | Syllabus, Introduction <br/> Blended Instruction| Stats Modeling Overview<br/>Generating fake data in R| Slides:<br/>[Prob-distributions.pdf](/resources/prob-distributions.pdf){:target="_blank"} |
 | **2**: Jan 31, Feb 1 | Data and Graphics in R (Ch.1) <br/> R Markdown <br/> <br/> | Data and Graphics in R (Ch.1) <br/>Prob. & Statistics Review  <br/> <br/>|Slides:<br/> **Assignment #1**|
 | **3**: Feb 6, 8 | Prob. & Statistics Review<br/> Generating fake data in R <br/> | Simple linear regression (SLR) <br/> (Ch.2) <br/> |Slides:<br/> |
 | **4**: Feb 13, 15 | <br/> SLR (Ch.2) <br/> <br/> | <br/> SLR (Ch.2) <br/> <br/> |Slides:<br/> **Assignment #2**|
