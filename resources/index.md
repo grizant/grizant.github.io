@@ -30,6 +30,7 @@ permalink: /resources/
 ## Education & learning strategies
 
 - University of Arizona [Learning to Learn Series](http://academicaffairs.arizona.edu/learning2learn){:target="_blank"}
+- [blended instruction](https://www.youtube.com/watch?v=paQCE58334M){:target="_blank"}
 
 ## Productivity & fun things
 

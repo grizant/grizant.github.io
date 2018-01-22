@@ -27,7 +27,7 @@ For other important dates see the UNR [Spring 2018 Calendar](https://www.unr.edu
 
 | Week | Tuesday | Thursday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Jan 23, 25 | Syllabus, Introduction <br/> Blended Instruction| Stats Modeling Overview<br/>Generating fake data in R| Slides:<br/>[Prob-distributions.pdf](/resources/prob-distributions.pdf){:target="_blank"} |
+| **1**: Jan 23, 25 | Introduction, [syllabus](STAT_757_syllabus_Spring2018_Schissler.pdf){:target="_blank"}, [textbook](http://www.stat.tamu.edu/~sheather/book/){:target="_blank"}. <br/> Teaching philosophy:<br/>[Learning to learn](http://academicaffairs.arizona.edu/learning2learn){:target="_blank"}/[blended instruction](https://www.youtube.com/watch?v=paQCE58334M){:target="_blank"}| Stats Modeling Overview<br/>Generating fake data in R| Slides:<br/>[Prob-distributions.pdf](/resources/prob-distributions.pdf){:target="_blank"} |
 | **2**: Jan 31, Feb 1 | Data and Graphics in R (Ch.1) <br/> R Markdown <br/> <br/> | Data and Graphics in R (Ch.1) <br/>Prob. & Statistics Review  <br/> <br/>|Slides:<br/> **Assignment #1**|
 | **3**: Feb 6, 8 | Prob. & Statistics Review<br/> Generating fake data in R <br/> | Simple linear regression (SLR) <br/> (Ch.2) <br/> |Slides:<br/> |
 | **4**: Feb 13, 15 | <br/> SLR (Ch.2) <br/> <br/> | <br/> SLR (Ch.2) <br/> <br/> |Slides:<br/> **Assignment #2**|
