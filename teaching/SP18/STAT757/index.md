@@ -10,6 +10,7 @@ exclude: true
 - Syllabus: Click [here to download (PDF)](STAT_757_syllabus_Spring2018_Schissler.pdf){:target="_blank"}.
 - Gradebook: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: *A Modern Approach to Regression with R*, by S. Sheather.
+- [Preview of textbook with most of the first chapter](https://books.google.com/books?id=zS3Jiyxqr98C&printsec=copyright#v=onepage&q&f=false){:target="_blank"}
 - Text Website: [www.stat.tamu.edu/~sheather/book/](http://www.stat.tamu.edu/~sheather/book/){:target="_blank"}
 - Office Hours: TBD or by appointment in 224 DMSC
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT757](https://github.com/grizant/STAT757){:target="_blank"}
