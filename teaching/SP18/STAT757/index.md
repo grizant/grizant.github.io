@@ -14,6 +14,7 @@ exclude: true
 - Text Website: [www.stat.tamu.edu/~sheather/book/](http://www.stat.tamu.edu/~sheather/book/){:target="_blank"}
 - Office Hours: TBD or by appointment in 224 DMSC
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT757](https://github.com/grizant/STAT757){:target="_blank"}
+- [Datacamp](https://www.datacamp.com/){:target="_blank"} for online training modules in R.
 
 # Course tools and information
 - In DMSC 106, the computers will have all the software installed.<br/>(Please install on your personal machines as needed.)
