@@ -12,7 +12,7 @@ exclude: true
 - Textbook: *A Modern Approach to Regression with R*, by S. Sheather.
 - [Preview of textbook with most of the first chapter](https://books.google.com/books?id=zS3Jiyxqr98C&printsec=copyright#v=onepage&q&f=false){:target="_blank"}
 - Text Website: [www.stat.tamu.edu/~sheather/book/](http://www.stat.tamu.edu/~sheather/book/){:target="_blank"}
-- Office Hours: TueThu 3-4 or by appointment in 224 DMSC
+- Office Hours: TueThu 3-4pm or by appointment in 224 DMSC
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT757](https://github.com/grizant/STAT757){:target="_blank"}
 - [Datacamp](https://www.datacamp.com/){:target="_blank"} for online training modules in R.
 
