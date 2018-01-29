@@ -11,6 +11,7 @@ permalink: /resources/
 - Dr. Paul Hurtado and Dr. Ania Panorska's probability notes: [probability-review.pdf](probability-review.pdf){:target="_blank"}
 - [University of Nevada, Reno Math & Stats Dept](https://www.unr.edu/math){:target="_blank"}
 - Anything by [Dennis Lindley](https://en.wikipedia.org/wiki/Dennis_Lindley){:target="_blank"}
+- Great introduction to statistics by Prof Joe Watkins at the University of Ariziona: [http://math.arizona.edu/~jwatkins/math363s17.htm](http://math.arizona.edu/~jwatkins/math363s17.htm){:target="_blank"}
 
 ## Computing and reproducible research
 
