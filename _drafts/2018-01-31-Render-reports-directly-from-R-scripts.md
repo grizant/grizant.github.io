@@ -9,4 +9,7 @@ categories: teaching STAT_757 R RMarkdown Workflow
 
 (https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/)[https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/]
 
+(http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/)[http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/]
+
 benefits
+- directly from R no chunk-specific problems
