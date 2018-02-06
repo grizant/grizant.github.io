@@ -11,4 +11,5 @@ I'm giving a talk this Friday. All are welcome to join!
 
 Scientific discovery and learning from data are challenging tasks. Understanding uncertainty through statistical modeling is essential in all areas of research. However, widely-used statistical constructions including the infamous P-value often do more harm than good in the pursuit of knowledge. Indeed, P-values are under attack in both statistical and domain-specific communities. In this talk, I'll discuss some problems in P-value decision theoretic reasoning and present a flexible and philosophically coherent strategy - Bayesian modeling and inference. Recent advances in computation and software provide extremely fast and relatively straightforward implementation of complex Bayesian models. After providing background on Bayesian modeling in general, we'll walk through some examples in cognitive modeling, such as inferring IQ scores using Gaussian processes, hierarchical signal detection, and psychophysical functions. The case studies will be demonstrated in R and Stan, and code will be provided to serve as templates. The session will conclude with ample time for discussion.
 
-[Flyer.pdf]({{ "/assets/Stan_talk_neurolecture_series.pdf" | absolute_url }}){:target="_blank"}
+[Flyer.pdf]({{ "/assets/Schissler_flyer_neurolecture_series_9feb2018.pdf" | absolute_url }}){:target="_blank"}
+Slides
