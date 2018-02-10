@@ -12,6 +12,8 @@ permalink: /resources/
 - [University of Nevada, Reno Math & Stats Dept](https://www.unr.edu/math){:target="_blank"}
 - Anything by [Dennis Lindley](https://en.wikipedia.org/wiki/Dennis_Lindley){:target="_blank"}
 - Great introduction to statistics by Prof Joe Watkins at the University of Ariziona: [http://math.arizona.edu/~jwatkins/math363s17.htm](http://math.arizona.edu/~jwatkins/math363s17.htm){:target="_blank"}
+- This is a nice page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
+
 
 ## Computing and reproducible research
 
