@@ -14,3 +14,4 @@ Scientific discovery and learning from data are challenging tasks. Understanding
 [Flyer.pdf]({{ "/assets/Schissler_flyer_neurolecture_series_9feb2018.pdf" | absolute_url }}){:target="_blank"}
 [Slides.pdf]({{ "/assets/Stan_talk_neurolecture_series.pdf" | absolute_url }}){:target="_blank"}
 
+[UNR Neurolecture Series](https://www.unr.edu/neuroscience/center/neurolecture-speaker-series/){:target="_blank"}
