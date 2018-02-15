@@ -30,6 +30,8 @@ permalink: /resources/
 
 ## Data warehouses
 
+UNR's Dr. Paul Hurtado's Data Resource page:[http://pauljhurtado.com/data/](http://pauljhurtado.com/data/){:target="_blank"}
+
 ## Education & learning strategies
 
 - University of Arizona [Learning to Learn Series](http://academicaffairs.arizona.edu/learning2learn){:target="_blank"}

@@ -27,6 +27,11 @@ exclude: true
 - Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
+# Project resourcs
+
+- UNR's Dr. Paul Hurtado's Data Resource page:[http://pauljhurtado.com/data/](http://pauljhurtado.com/data/){:target="_blank"}
+- More resources available soon
+
 # Schedule (subject to change and will be updated regularly)
 For other important dates see the UNR [Spring 2018 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#Spring2018){:target="_blank"}.
 
