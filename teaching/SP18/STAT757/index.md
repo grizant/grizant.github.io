@@ -22,7 +22,7 @@ exclude: true
 - If you want to use RMarkdown to produce a PDF, you must install LaTeX on your machine. Click [this page for instructions](http://www.pauljhurtado.com/latex/){:target="_blank"}.
 - See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/){:target="_blank"} for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/){:target="_blank"}.
 - Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com){:target="_blank"}
-- RStudio cheatsheets (many are highly useful): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
+- RStudio cheatsheets (many are highly useful, the old version of the Rmarkdown is recommended): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
 - Great introduction to statistics by Prof Joe Watkins at the University of Ariziona: [](http://math.arizona.edu/~jwatkins/math363s17.htm){:target="_blank"}
 - Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
