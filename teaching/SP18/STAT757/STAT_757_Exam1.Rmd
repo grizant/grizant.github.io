@@ -1,0 +1,31 @@
+---
+title: "STAT 757 Exam 1"
+subtitle: "DUE 4/01/2018 11:59PM"
+author: "AG Schissler"
+date: "3/07/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Take-home Exam Procedures
+
+You may use your notes, textbook, and R while taking this exam. You are free to look online for definitions, however searching directly for answers to the given questions will be treated as cheating and dealt with according to UNR’s policies regarding Academic Dishonesty. You are encouraged to ask questions to the instructor during the exam (but only hints will be given!) Partial credit WILL be awarded where sufficient details have been provided. This exam must be completed **individually** (you may not discuss any aspect of the exam with your classmates).
+
+Modify this `.Rmd` file to produce a **report** that addresses the parts indicated in Exercise 3.4.3 in @sheather2009 for `AdRevenue.csv` dataset. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter10.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter3NewMarch2011.R). Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format `SURNAME-FIRSTNAME-Exam1.Rmd` and `SURNAME-FIRSTNAME-Exam1.pdf`.
+
+By a *report*, I mean that disjointed answers are not acceptable. Synthesize the parts into a coherent story. Be sure, however, to address all parts indicated in the question as you are responsible for everything that is asked. Make your report reader friendly - **concise**, but **informative** and conveying **mastery** of course concepts and skills. Please see `STAT_757_Exam1_rubric.pdf` for how you will be assessed.
+
+## References
