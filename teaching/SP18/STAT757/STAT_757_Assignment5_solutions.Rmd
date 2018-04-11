@@ -172,7 +172,7 @@ Similarly,
 \begin{align*}
 E(Y | d=1) = \beta_0 + \beta_2 + (\beta_1 + \beta_3) x & \Rightarrow \\ 
 E(\Delta Y | d=1) &= (\beta_1 + \beta_3) \Delta x \\
--a &= (\beta_1 + \beta_3) \Delta x \\
+-1 &= (\beta_1 + \beta_3) \Delta x \\
 \frac{-1}{\beta_1 + \beta_3} &= \Delta x
 \end{align*}
 
