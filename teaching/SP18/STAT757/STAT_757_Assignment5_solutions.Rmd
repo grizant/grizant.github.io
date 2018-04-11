@@ -1,0 +1,191 @@
+---
+title: "STAT 757 Assignment 5 Solutions"
+subtitle: "DUE 4/01/2018 11:59PM"
+author: "AG Schissler"
+date: "2/14/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Instructions [20 points]
+
+Modify this file to provide responses to the Ch.5 Exercises in @sheather2009. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter5.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter5.R). Also address the project milestones indicated below. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format SURNAME-FIRSTNAME-Assignment5.Rmd and SURNAME-FIRSTNAME-Assignment5.pdf.
+
+```{r, setPath, echo = T}
+data_dir <- "/Users/alfred/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data"
+
+```
+
+## Exercise 5.4.2
+
+```{r, HoustonChronicle, echo = T}
+
+reading <- read.csv(file.path(data_dir, "HoustonChronicle.csv"),header=TRUE)
+str(reading)
+head(reading)
+## clean up names
+names(reading) <- gsub("X\\.", "", names(reading))
+## "factorize" year
+reading$Year <- factor(reading$Year)
+
+```
+
+```{r, reading_plot, echo = T, fig.height = 5}
+require(ggplot2)
+p1 <- ggplot(data = reading, aes(x = reading$Low.income.students, y = Repeating.1st.Grade, shape = Year, color = Year))
+p1 + geom_point()
+p1 + geom_point() + stat_smooth(method = "lm", col = "blue")
+```
+The Year category seems fairly randomly disributed across data points. But this may be something that is hard to see by eye.
+
+### 5.4.2 Part a
+
+This is a the analysis of covariance (ANCOVA) scenario with co-incident lines.
+
+```{r, readingA, echo = T, fig.height = 5}
+fit1 <- lm(Repeating.1st.Grade ~ Low.income.students, data = reading)
+summary(fit1)
+par(mfrow=c(2,2))
+plot(fit1)
+```
+Looks like a decent fit and the slope is significantly greater than 0. 
+
+### 5.4.2 Part b
+
+This scenario ignores the low-income percentage.
+
+```{r, readingB, echo = T, fig.height = 5}
+fit2 <- lm(Repeating.1st.Grade ~ Year, data = reading)
+summary(fit2)
+par(mfrow=c(2,2))
+plot(fit2)
+```
+This amounts to a t-test on the different means between the Years. There is not much evidence of an increase when not accounting for low-income status.
+
+### 5.4.2 Part c
+
+The scenario below assumes an additive effect of Year (parallel lines).
+
+```{r, readingB2, echo = T, fig.height = 5}
+fit3 <- lm(Repeating.1st.Grade ~ Year + Low.income.students, data = reading)
+summary(fit3)
+par(mfrow=c(2,2))
+plot(fit3)
+```
+
+This scenario is the most general ANCOVA.
+
+```{r, readingC, echo = T, fig.height = 5}
+full <- lm(Repeating.1st.Grade ~ Low.income.students + Year + Low.income.students:Year, data = reading)
+summary(full)
+par(mfrow=c(2,2))
+plot(full)
+```
+
+There is little evidence that the association between the percentage low-income students and percentage reading failure rates differs between the years 1994 and 2004. Let's do an ANOVA to compare models:
+
+```{r, anova_5_4_2}
+## check against only parallel lines model
+anova(fit3, full)
+## check against only Year model
+anova(fit2, full) 
+## check against only low income model
+anova(fit1, full) 
+
+```
+Based on this it is reasonable to not consider the Year in the analysis. It does however show including the an interaction with low-income is better than leaving it out entirely (Year-only model). My final analysis would be that the the association does not change with year, but there is a "positive" association between the percentage of low-income students and higher reading test failure rates. The final model is plotting below:
+
+```{r, reading_plot_final, echo = T, fig.height = 5}
+require(ggplot2)
+p1 <- ggplot(data = reading, aes(x = reading$Low.income.students, y = Repeating.1st.Grade))
+p1 + geom_point(aes(shape = Year, color = Year)) + stat_smooth(method = "lm", col = "blue")
+```
+
+## Exercise 5.4.3
+
+```{r, latour, echo = T, fig.height = 5}
+
+latour <- read.table(file.path(data_dir, "Latour.txt"), header=TRUE)
+head(latour)
+str(latour)
+
+#Figure 5.8 on page 149
+y <- latour$Rain
+par(mfrow=c(1,1))
+plot(latour$EndofHarvest, latour$Quality,pch=y+1,col=y+1,xlab="End of Harvest (in days since August 31)")
+abline(lsfit(latour$EndofHarvest[y==0],latour$Quality[y==0]),lty=1,col=1)
+abline(lsfit(latour$EndofHarvest[y==1],latour$Quality[y==1]),lty=2,col=2)
+legend(23, 2.5,legend=c("No","Yes"),pch=1:2,col=1:2,title="Rain at Harvest?")
+
+```
+
+### Exercise 5.4.3 Part A
+
+The plot suggests differing slopes and intercepts when considering the rate of change in wine quality and days after August 31 for years with rain at harvest. Note that the y-intercept is not illustrated in the plot. As instructed in the prompt, first let's fit the most general model:
+
+```{r, latourA, echo = T}
+#Regression output on page 148
+mfull <- lm(Quality ~ EndofHarvest + Rain + Rain:EndofHarvest, data = latour)
+summary(mfull)
+
+#Regression output on page 149
+mreduced <- lm(Quality ~ EndofHarvest + Rain, data = latour)
+summary(mreduced)
+anova(mreduced,mfull)
+
+```
+By inspecting the anova analysis, it is clear that the impact of a rain on the rate of change between the wine quality and later harvest is statistically significant.
+
+### Exercise 5.4.3 Part B
+
+To estimate the days delay for one point decrease in wine quality, we follow the description on the top of page 141 in @sheather2009 and note that:
+
+\begin{align*}
+E(Y | d=0) = \beta_0 + \beta_1 x & \Rightarrow \\ 
+E(\Delta Y | d=0) &= \beta_0 + \beta_1 \Delta x\\
+-1 &= \beta_0 + \beta_1 \Delta x \\
+\frac{-1-\beta_0}{\beta_1} &= \Delta x
+\end{align*}
+
+In the absence of rain, we estimate the days delayed to correspond with a point decrease in quality to be
+```{r, latourB1, echo = T}
+unname((-1-coefficients(mfull)[1])/coefficients(mfull)[2])
+```
+
+Similarly,
+
+\begin{align*}
+E(Y | d=1) = \beta_0 + \beta_2 + (\beta_1 + \beta_3) x & \Rightarrow \\ 
+E(\Delta Y | d=1) &= \beta_0 + \beta_2 + (\beta_1 + \beta_3) \Delta x \\
+-1 &= \beta_0 + \beta_2 + (\beta_1 + \beta_3) \Delta x \\
+\frac{-1-\beta_0 - \beta_2}{\beta_1 + \beta_3} &= \Delta x
+\end{align*}
+
+
+In the presence of rain, we estimate the days delayed to correspond with a point decrease in quality to be
+```{r, latourB2, echo = T}
+unname((-1-coefficients(mfull)[1] - coefficients(mfull)[3])/(coefficients(mfull)[2] + coefficients(mfull)[4]))
+```
+
+## Project milestones [20 points]
+
+1. Perform an exploratory data analysis:
+ * Numerically summarize the variables.
+ * Make plots and explore relationships between variables.
+ * Identify any strange points or anything else that doesn't make sense.
+2. Begin to think about how to model the relationships in your data.
+
+## References
