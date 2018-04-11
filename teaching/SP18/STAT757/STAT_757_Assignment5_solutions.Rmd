@@ -153,31 +153,33 @@ By inspecting the anova analysis, it is clear that the impact of a rain on the r
 
 To estimate the days delay for one point decrease in wine quality, we follow the description on the top of page 141 in @sheather2009 and note that:
 
+Let $\Delta Y = Y_{2} - Y_{1}$ and $\Delta x = x_{2} - x_{1}$. And so the question asks for the expected number of days ($\Delta x$) with $\Delta Y = -1$. 
+
 \begin{align*}
 E(Y | d=0) = \beta_0 + \beta_1 x & \Rightarrow \\ 
-E(\Delta Y | d=0) &= \beta_0 + \beta_1 \Delta x\\
--1 &= \beta_0 + \beta_1 \Delta x \\
-\frac{-1-\beta_0}{\beta_1} &= \Delta x
+E(\Delta Y | d=0) &= E(Y_2 - Y_1 | d=0) \beta_0 + \beta_1 x_2  - \beta_0 - \beta_1 x_1 \\
+-1 &= \beta_1 \Delta x \\
+\frac{-1}{\beta_1} &= \Delta x
 \end{align*}
 
 In the absence of rain, we estimate the days delayed to correspond with a point decrease in quality to be
 ```{r, latourB1, echo = T}
-unname((-1-coefficients(mfull)[1])/coefficients(mfull)[2])
+unname(-1/coefficients(mfull)[2])
 ```
 
 Similarly,
 
 \begin{align*}
 E(Y | d=1) = \beta_0 + \beta_2 + (\beta_1 + \beta_3) x & \Rightarrow \\ 
-E(\Delta Y | d=1) &= \beta_0 + \beta_2 + (\beta_1 + \beta_3) \Delta x \\
--1 &= \beta_0 + \beta_2 + (\beta_1 + \beta_3) \Delta x \\
-\frac{-1-\beta_0 - \beta_2}{\beta_1 + \beta_3} &= \Delta x
+E(\Delta Y | d=1) &= (\beta_1 + \beta_3) \Delta x \\
+-a &= (\beta_1 + \beta_3) \Delta x \\
+\frac{-1}{\beta_1 + \beta_3} &= \Delta x
 \end{align*}
 
 
 In the presence of rain, we estimate the days delayed to correspond with a point decrease in quality to be
 ```{r, latourB2, echo = T}
-unname((-1-coefficients(mfull)[1] - coefficients(mfull)[3])/(coefficients(mfull)[2] + coefficients(mfull)[4]))
+unname(-1/(coefficients(mfull)[2] + coefficients(mfull)[4]))
 ```
 
 ## Project milestones [20 points]
