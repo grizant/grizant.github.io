@@ -1,0 +1,101 @@
+---
+title: "STAT 757 Assignment 6"
+subtitle: "DUE 4/08/2018 11:59PM"
+author: "AG Schissler"
+date: "2/14/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Instructions [20 points]
+
+Modify this file to provide responses to the Ch.6 Exercises in @sheather2009. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter6NewMarch2011.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter6NewMarch2011.R). Also address the project milestones indicated below. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format SURNAME-FIRSTNAME-Assignment6.Rmd and SURNAME-FIRSTNAME-Assignment6.pdf.
+
+## Exercise 6.7.5 [60 points] 
+
+```{r, setup}
+myDir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data/"
+dat <- read.delim(file.path(myDir,"pgatour2006.csv"), sep = ",")
+str(dat)
+## subset to only the Y and seven predictors of interest
+dat2 <- dat[,c("PrizeMoney", "DrivingAccuracy", "GIR", "PuttingAverage", "BirdieConversion", "SandSaves", "Scrambling", "PuttsPerRound")]
+```
+
+### Part A
+
+Based solely on the scatterplots, a log(Y) transformation greatly reduces the skew in Y. All pairs appear Gaussian and so the transformation will likely lead to a good fit. A residual analysis post-fit must be completed to further confirm this approach's validity. 
+
+```{r, parta1}
+pairs(dat2)
+```
+
+```{r, parta2}
+pairs(cbind(log(dat2$PrizeMoney), dat2[,-1]))
+```
+
+### Part B
+
+The fit appears adequate, while errors approximately normally distributed with 0 mean and constant variance.
+
+```{r, partb}
+m1 <- lm(log(PrizeMoney) ~ DrivingAccuracy + GIR +
+             PuttingAverage + BirdieConversion + SandSaves +
+             Scrambling + PuttsPerRound, data = dat2)
+par(mfrow = c(2,2))
+plot(m1)
+```
+
+### Part C
+
+No observation has a large Cook's distance based on the Residual vs Leverage plot. So there are no "bad" leverage points. However, row 185 has a standardized residual of 3.3090 which is slightly unusual for data set with 196 observations. The next largest residual, corresponding to row 47, is large (2.6) but arises with the expected probability for this data set. Row 178 inhibits high leverage and corresponds to Tiger Woods (the best golfer during this time). It may be interesting to see how the parameter estimates vary if this point was removed.
+
+
+```{r, partc}
+## standardized residuals
+head(sort(abs(rstandard(m1)), decreasing = T), 10)
+1 - pnorm(3.3090)
+1/196
+1 - pnorm(2.6389)
+1/196
+## leverage
+head(sort(hatvalues(m1), decreasing = T), 10)
+dat[178,]
+## high leverage cutoff
+(2*8)/196
+```
+
+### Part D
+
+Examining the model summary below, we see that overall the model is significant with $F=33.9$ with a p-value essentially zero. However, only two of the seven predictors are significant. Variable selection (Ch.7) will help rememdy this situation.
+
+```{r, partd}
+summary(m1)
+```
+
+### Part E
+
+Removing all the non-significant predictors at once is a poor idea. Correlations among the predictors could mask relationships between $PrizeMoney$ and other predictors. Later, we'll see that correlation between predictors inflates the variance of regression estimates, leading to poor confidence intervals/hypothesis test results.
+
+## Project milestones [20 points]
+
+1. Prepare a data analysis plan.
+ * What model(s) will you use?
+ * How will you fit this model (code)?
+ * How will you generate fake data from this model?
+ * What model diagnostics will you use?
+ * How will you refine the model? Or select from competing models?
+
+## References
