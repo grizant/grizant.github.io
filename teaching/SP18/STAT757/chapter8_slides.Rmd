@@ -1,0 +1,177 @@
+---
+title: "Sheather Chapter 8: Logistic Regression"
+author: AG Schissler
+date: 17 Apr 2018
+output: ioslides_presentation
+---
+
+# Logistic regression based on a single predictor
+
+## Generalized linear models
+
+- This chapter introduces a special case of \emph{generalized linear models}, logistic regression.
+- GLMs are commonly used in practice. The idea is to identify a link function to create a linear regression.
+- One chooses a link function that is appropriate for the dependent variable.
+- For a binary outcome variable, a common distributional choice is a binomial distribution.
+- For a binomial distribution, the logistic link function is a good choice.
+
+## The binomial distribution
+
+- $Y \sim Bin(m,\theta)$
+- $m$ identical trials of experiment with two outcomes.
+- The "success" outcome (coded as 1) occurs with probability $\theta$.
+- $E(Y|m,\theta) = m\theta$
+- $Var(Y|m,\theta) = m\theta (1-\theta)$
+- For a single predictor $x_i$, we model the probability of success as a function of $x_i$:
+
+$(Y|x_i) \sim Bin(m_i, \theta (x_i))$, $i=1,...,n$
+
+Note that $y_i / m_i$ is an unbiased estimate of $\theta (x_i)$ and $y_i / m_i$ varies between 0 and 1.
+
+## Motivating data set: MichelinFood
+
+```{r, setup, echo=FALSE}
+data_dir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data"
+MichelinFood <- read.table(file.path(data_dir, "MichelinFood.txt"),
+                           header=TRUE)
+head(MichelinFood)
+```
+
+## The logistic function and odds
+
+$log(\frac{\theta (x)}{1-\theta (x)}) = \beta_0 + \beta_1 x$ $\iff$ $\theta (x) = \frac{1}{1+exp(- \{\beta_0 + \beta_1 x\})}$
+
+
+```{r, m1, echo=FALSE}
+m1 <- glm(cbind(InMichelin,NotInMichelin)~Food,
+          family=binomial, data = MichelinFood)
+x <- seq(15,28,0.05)
+y <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*x)))
+plot(MichelinFood$Food,MichelinFood$proportion,
+     ylab="Probability of inclusion in the Michelin Guide",
+     xlab="Zagat Food Rating")
+lines(x,y)
+```
+
+## Fitting a GLM with binomial response
+
+```{r, m1_code, echo=TRUE}
+m1 <- glm(cbind(InMichelin,NotInMichelin)~Food,
+          family=binomial, data = MichelinFood)
+summary(m1)
+```
+
+## Likelihood for logistic regression
+
+- Parameter estimates are obtained via maximization of the log-likelihood
+- Numeric methods must be used (no analytic solution)
+- Parameter confidence intervals and hypothesis tests based on Wald test
+- Marginal distribution is normal not $t$ as in MLR.
+
+## Deviance $G^2$
+
+- The concept of deviance replaces the concept of residual sum of squares ($RSS$) when maximum likelihood is used to fit.
+- Think of it as the difference from a reduced model to a full (saturated) model.
+- Deviance has a $\chi^2_{n-p-1}$ distribution when each $m_i$ is large enough.
+- This can be used as a goodness-of-fit diagnostic. Or a model comparison tool...
+
+## Model comparison through difference in deviance
+
+```{r}
+#Value of the difference in devinace and associated p-value on page 273
+m1$null.deviance-m1$deviance
+## one degree of freedom since the null deviance has only an intercept
+pchisq(m1$null.deviance-m1$deviance,1,lower=FALSE)
+```
+
+## $R^2$ for logistic regression
+
+$R^2_{dev}=1 - \frac{G^2_{H_A}}{G^2_{H_0}}$
+
+## Residuals for logistic regression
+
+Three types of residuals:
+
+- Response residuals
+- Pearson residuals and Pearson standardized residuals
+- Deviance residuals and Deviance standardized residuals
+
+Main takeaway is to use standardized Pearson or Deviance residuals.
+
+Standardized deviance residuals is slightly preferred. 
+
+Residual analysis proceeds as in the MLR case.
+
+# Binary logistic regression
+
+----
+- Most often in practice one does not observe multiple trials at each predictor.
+- This means that $m_i=1$ for all $i$. 
+- Unfortunately this complicates the measures of deviance and goodness-of-fit.
+- and also the residuals become difficult to interpret.
+
+## Motivating data set: MichelinFood
+
+```{r, setup2, echo=FALSE, results="markup"}
+data_dir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data"
+MichelinNY <- read.csv(file.path(data_dir, "MichelinNY.csv"),
+                           header=TRUE)
+head(MichelinNY)
+```
+
+## Plot of data with logistic and loess fit
+
+```{r, echo=FALSE}
+y <- MichelinNY$InMichelin
+m1 <- glm(y~Food,family=binomial(),data=MichelinNY)
+#Figure 8.7 on page 282
+par(mfrow=c(1,1))
+xx <- seq(15,28.2,0.05)
+yy <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*xx)))
+loessfit1 <- loess(y ~ Food,degree=1,span=2/3, data = MichelinNY)
+plot(jitter(MichelinNY$Food,amount=.15),jitter(y,amount=0.03),xlab="Food Rating",
+ylab="In Michelin Guide? (0=No, 1=Yes)")
+lines(xx,yy)
+lines(xx,predict(loessfit1,newdata = data.frame(Food=xx)),lty=2)
+```
+
+## Deviance for the case of binary data
+
+- Since $m_i=1$ always, the deviance no longer has the distribution needed to assess the goodness-of-fit (that a logistic model is a good choice).
+- But the good news is that the difference in deviances is still chi-squared.
+- See the nice analysis on p.280 for details.
+
+## Residuals for Binary data
+
+- (Standardized) residuals can have a non-random pattern even if the model is correct.
+- One solution is to aggregate as in the previous section, but this doesn't work well when you have a large number of predictors.
+- Another solution is to compare to nonparametrics (as in the marginal model plots).
+- Or you can transform the predictors...
+
+## Transforming predictors for binary
+
+- The main idea is that if your predictors follow certain distributions, then you can analytically determine what transformations to perform and terms to include.
+- If your predictor $X$ is normally distributed with the same variance for each case of $Y$, then no transformation is needed.
+- If your predictor $X$ is normally distributed with different variances for each case of $Y$, then the log odds are a quadratic function of $x$. More generally, if you have more than one $x$ then you need to include the interaction $x_i x_j$.
+
+## Transforming predictors for binary (con'd)
+
+- If your predictor $x$ is Gamma (or other skewed variable), then a $log(x)$ must be included.
+- The general advice is to plot your variables and then decide whether to transform (via box-cox) or include quadratic/crossterms or log terms.
+- Even still the residuals are difficult to interpret.
+- So Sheather recommends just using nonparametric comparisons.
+
+## Marginal model plots for binary
+
+- Follow the recommendations based on your predictor's distributions (e.g., include log(x) term or quadratic term).
+- Then create marginal model plots for each predictor and inspect.
+
+## Marginal model plots for binary 
+
+```{r}
+m2 <- glm( y~Food + Decor + Service + Price + log(Price),
+          family=binomial(),data=MichelinNY )
+car::mmps(m2,layout=c(2,3))
+```
+
+
