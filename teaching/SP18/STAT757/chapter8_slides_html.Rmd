@@ -3,6 +3,7 @@ title: "Sheather Chapter 8: Logistic Regression"
 author: AG Schissler
 date: 17 Apr 2018
 output: html_document
+exclude: true
 ---
 
 # Logistic regression based on a single predictor

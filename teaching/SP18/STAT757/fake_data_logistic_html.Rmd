@@ -1,0 +1,299 @@
+---
+title: "Simulating from a logisitic regression"
+author: AG Schissler
+date: 19 Apr 2018
+output: html_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+# Introduction
+
+## Why simulate to understand a model?
+
+- To ensure you know exactly what your model assumed.
+- To posit a generative model for your data.
+- To check your code (implementation) via recovery of simulation settings.
+- To see what good diagnostics look like.
+- To see *poor* diagnostics to guide model adjustments (iterate model design).
+
+
+## General principles
+
+- Let your real data guide the simulation settings.
+- e.g., select $n$ = number of observations
+- e.g., select distributions for predictors, $Y$, with approximate shape, center, spread.
+- Explore what happens as $n$ increases. Or you change models, transformations, etc.
+- Experiment with your simulation to understand: Data Science!
+
+# Simulating from logistic regression with a single Gaussian predictor
+
+## A logistic model for a binary outcome
+
+$log \left( \frac{\theta (x)}{1-\theta (x)} \right) = \beta_0 + \beta_1 x$ $\iff$ $\theta (x) = \frac{1}{1+exp(- \{\beta_0 + \beta_1 x\})}$
+
+with $(Y|x_i) \sim Bin(m_i=1,\theta (x_i))$ for $i=1,...,n$.
+
+## Data generation for a Gaussian predictor, same variance for each level of $Y$.
+
+```{r, fig.cap="Estimated densities for the conditional distribution of X given each value of Y. The blue curve is X|Y=0 and the black curve is X|Y=1."}
+set.seed(44)
+n <- 200
+theta_overall <- 0.4
+## number of successes
+num1 <- theta_overall*n
+num0 <- n - num1
+x1 <- rnorm(n = num1, mean = 2, sd = 1)
+x0 <- rnorm(n = num0, mean = -1, sd = 1)
+plot(density(x0), xlim=c(min(x0), max(x1)), main="", col = "blue")
+lines(density(x1))
+```
+
+---
+
+```{r}
+x <- c( x1, x0 )
+y <- c( rep(1, num1), rep(0, num0) )
+m1 <- glm( y ~ x, family=binomial() )
+summary(m1)
+```
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+x_seq <- seq(-4,4,length.out = n )
+y_hat <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*x_seq)))
+lines(x_seq,y_hat)
+```
+
+---
+
+## Diagnostics 
+
+```{r, fig.cap="The marginal model plots show good agreement, indicating a great fit."}
+car::mmps(m1,layout=c(1,2))
+```
+
+# Data generation for a Gaussian when beta's are specified
+
+If you specify the beta's in the logistic regression, you can check that your code is working by recovering those values.
+
+```{r}
+set.seed(44)
+n <- 100
+beta0 <- 0
+beta1 <- 2
+## number of successes
+x <- rnorm(n = n, mean = 0, sd = 1)
+plot(density(x, bw = "sj"), xlim=c(min(x), max(x)))
+```
+---
+
+```{r}
+theta_x <- 1/( 1 + exp(-(beta0 + beta1*x)) )
+y <- rbinom(n = n, size = 1, prob = theta_x )
+x1 <- x[y==1]
+x0 <- x[y==0]
+mean(x1); sd(x1)
+mean(x0); sd(x0)
+plot(density(x0), xlim=c(min(x0), max(x1)), col = "blue")
+lines(density(x1))
+```
+---
+
+```{r}
+m1 <- glm( y ~ x, family=binomial() )
+summary(m1)
+```
+
+Notice that a confidence intervals would cover the true beta's.
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+x_seq <- seq(-4,4,length.out = n )
+y_hat <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*x_seq)))
+lines(x_seq,y_hat)
+```
+
+---
+
+## diagnostics when beta's are specified
+
+```{r, fig.cap="The marginal model plots show good agreement, indicating a great fit."}
+car::mmps(m1,layout=c(1,2))
+```
+
+# Simulting from logistic regression with Gaussian predictor with different variances
+
+## data generation for a Gaussian, different variance
+
+```{r}
+set.seed(444)
+n <- 200
+## number of successes
+theta_overall <- 0.4
+## number of successes
+num1 <- theta_overall*n
+num0 <- n - num1
+x1 <- rnorm(n = num1, mean = 2, sd = 2)
+x0 <- rnorm(n = num0, mean = -1, sd = 0.5)
+plot( density(x0, bw="sj" ), xlim=c(min(x0), max(x1)), col = "blue")
+lines( density( x1, bw="sj" ) )
+```
+---
+
+```{r}
+x <- c( x1, x0 )
+y <- c( rep(1, num1), rep(0, num0) )
+m1 <- glm( y ~ x, family=binomial() )
+summary(m1)
+```
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+x_seq <- seq( min(c(x1,x0)), max(c(x1,x0)), length.out = n )
+y_hat <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*x_seq)))
+lines(x_seq,y_hat)
+```
+
+---
+
+## Diagnostics 
+
+```{r, fig.cap="This model is slightly misfit"}
+car::mmps(m1,layout=c(1,2))
+```
+
+## Iterate/change model
+
+Following Sheater's advice @sheather2009, we'll include a quadractic term.
+
+```{r}
+m2 <- glm( y ~ x + I(x^2), family=binomial() )
+summary(m2)
+```
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+y_hat <- 1/(1+exp(-1*(m2$coeff[1] + m2$coeff[2]*x_seq + m2$coeff[3]*x_seq^2)))
+lines(x_seq,y_hat)
+```
+
+---
+
+## diagnostics 
+
+```{r, fig.cap="The fit looks great."}
+car::mmps(m2,layout=c(1,3))
+```
+
+
+# Simulting from logistic regression with Gamma predictor
+
+## data generation for a Gamma predictor
+
+```{r}
+set.seed(4444)
+n <- 1000
+## number of successes
+theta_overall <- 0.4
+## number of successes
+num1 <- theta_overall*n
+num0 <- n - num1
+x1 <- rgamma(n = num1, shape = 2, rate = 4)
+x0 <- rgamma(n = num0, shape = 1, rate = 1)
+plot( density(x1, bw="sj" ), xlim=c(min(x0), max(x1)) )
+lines( density( x0, bw="sj" ), col = "blue")
+```
+---
+
+```{r}
+x <- c( x1, x0 )
+y <- c( rep(1, num1), rep(0, num0) )
+m1 <- glm( y ~ x, family=binomial() )
+summary(m1)
+```
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+x_seq <- seq( min(c(x1,x0)), max(c(x1,x0)), length.out = n )
+y_hat <- 1/(1+exp(-1*(m1$coeff[1] + m1$coeff[2]*x_seq)))
+lines(x_seq,y_hat)
+```
+
+---
+
+## diagnostics 
+
+```{r, fig.cap="This model is misfit!"}
+car::mmps(m1,layout=c(1,2))
+```
+
+
+## iterate/change model
+
+Following Sheater's advice @sheather2009, we'll include a log(x) term.
+
+```{r}
+m2 <- glm( y ~ x + log(x), family=binomial() )
+summary(m2)
+```
+
+---
+
+```{r}
+plot(x, y,
+     ylab="Binary outcome, y",
+     xlab="Gaussian predictor, x")
+y_hat <- 1/(1+exp(-1*(m2$coeff[1] + m2$coeff[2]*x_seq + m2$coeff[3]*log(x_seq))))
+lines(x_seq,y_hat)
+```
+
+---
+
+## diagnostics 
+
+```{r, fig.cap="The fit looks much better."}
+car::mmps(m2,layout=c(1,3))
+```
+
+# Conclusion
+
+## Summary
+
+- Simulation is a great tool to understand what your model is doing.
+- It also helps to double check your code.
+- Also, it will guide model refinement.
+- Try Shiny to build interactive plots for a real playground (um, laboratory) 
+
+## References
