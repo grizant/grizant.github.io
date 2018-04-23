@@ -1,0 +1,78 @@
+---
+title: "STAT 757 Assignment 8"
+subtitle: "DUE 4/22/2018 11:59PM"
+author: "AG Schissler"
+date: "2/14/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Instructions [20 points]
+
+Modify this file to provide responses to the Ch.8 Exercises in @sheather2009. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter8.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter8.R). Also address the project milestones indicated below. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format SURNAME-FIRSTNAME-Assignment8.Rmd and SURNAME-FIRSTNAME-Assignment8.pdf.
+
+## Exercise 8.3.4 [60 points] 
+
+### Part A
+
+The marginal model plots show nice agreement for $x2, x5, \hat{y}$. However, $x1,x4$ show poor agreement, especially in the tails. Therefore, the model is invalid for these data as specified.
+
+### Part B
+
+Both $x1,x4$ are right-skewed. Following the guidelines by Sheather, I would include $log(x1),log(x4)$ in the model to account for this.
+
+### Part C
+
+All the marginal model plots show nice agreement; I conclude the model is valid.
+
+### Part D
+
+When a patient has a family history of heart disease ($x3=1$), the log-odds of heart disease is increased by $\hat{\beta}_3=0.941$. This corresponds to an odds ratio of $exp(\hat{\beta}_3)= 2.5625$.
+
+### Appendix
+
+The appendix contains the diagnostics for the model posed in Part B above.
+
+```{r}
+myDir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data/"
+dat <- read.delim(file.path(myDir,"HeartDisease.csv"), sep = ",")
+str(dat)
+```
+
+```{r}
+m2 <- glm(HeartDisease ~ x1 + log(x1) + x2 + x3 + x4 + log(x4) + x5,
+          family=binomial() , data=dat )
+summary(m2)
+```
+
+```{r, fig.height=7}
+library(alr3)
+par(mfrow=c(3,3))
+mmp(m2,dat$x1)
+mmp(m2,log(dat$x1))
+mmp(m2,dat$x2)
+mmp(m2,dat$x4)
+mmp(m2,log(dat$x2))
+mmp(m2,dat$x5)
+mmp(m2,m2$fitted.values,xlab="Fitted Values")
+```
+
+## Project milestones [20 points]
+
+1. Finalize your analysis.
+2. Draft your methods section of the written report.
+
+## References
