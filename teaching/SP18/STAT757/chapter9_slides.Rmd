@@ -1,0 +1,40 @@
+---
+title: "Chapter 9: Serially Correlated Errors"
+author: AG Schissler
+date: 24 Apr 2018
+output: ioslides_presentation
+exclude: true
+---
+
+# 9.1 Autocorrelation
+
+## 9.1 Introduction to autocorrelation
+
+- This chapter introduces times series modeling.
+- This is when you have evenly spaced measurements of a single quantity over time.
+- This is different from longitudinal data.
+- The main idea is to model the dependence in the sequence: observations near each other co-vary.
+- The autocorrelation function (p.308) and visualization allows you to examine the degree of dependence.
+
+# 9.2 Generalized least squares when errors are AR(1)
+
+## 9.2.1 Generalized least squares
+
+- This is a powerful idea and approach when the errors are correlated.
+- The main difference is the introduction of an estimate of the variance-covariance matrix into the LS equation.
+- Note that ignoring autocorrelation (using LS) gives consistent estimators of the $\beta$'s, but the variance is wrong! You can't trust the p-values or confidence intervals.
+
+## 9.2.2 Transforming a model with AR(1) errors into a modol with iid errors
+
+- This special case is important in practice.
+- Note that the first point is high leverage generally!
+
+## 9.2.3 A general approach to transforming GLS into LS
+
+- Consider $Y=X\beta + e$.
+- With $e \sim N(0,\Sigma)$. $\Sigma$ is a variance-covariance matrix.
+- Since $\Sigma$ is a positive-definite matrix is can be factorized.
+- Then using this factorization you can "decorrelate" the data.
+- So first fit a GLS to get an estimate of $\Sigma$.
+- Then transform the data as Sheather does on p.317.
+- Then you fit a ordinary LS model, check that errors are uncorrelated using ACF, and do typical diagnostics.
