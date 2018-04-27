@@ -1,0 +1,42 @@
+---
+title: "STAT 757 Exam 2"
+subtitle: "DUE 5/13/2018 11:59PM"
+author: "AG Schissler"
+date: "4/27/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Take-home Exam Procedures
+
+You may use your notes, textbook, and R while taking this exam. You are free to look online for definitions, however searching directly for answers to the given questions will be treated as cheating and dealt with according to UNR’s policies regarding Academic Dishonesty. You are encouraged to ask questions to the instructor during the exam (but only hints will be given!) Partial credit WILL be awarded where sufficient details have been provided. This exam must be completed **individually** (you may not discuss any aspect of the exam with your classmates).
+
+Modify this `.Rmd` file to respond to each question in @sheather2009 below. Follow the directions indicated by Sheather **exactly**. By that I mean: if there several parts, address them one by one in turn or, if the problem asks for a report, write a **short** report. That means write an Introduction, Methods, Results, and Discussion/Conclusion section. Please be concise and include only a few important figures and code. If your answers contain redundancies or is unclear you will lose points despite being technically correct. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format `SURNAME-FIRSTNAME-Exam1.Rmd` and `SURNAME-FIRSTNAME-Exam1.pdf`.
+
+## Exercise 5.4.1 [20 points]
+
+## Exercise 6.7.2 [20 points]
+
+## Exercise 7.5.1 [20 points]
+
+## Exercise 8.3.3 [20 points]
+
+## Exercise 9.4.3 [20 points]
+
+## Extension to Exercise 9.4.3 [10 points extra credit]
+
+Create fake data from your model developed in Exercise 9.4.3 to test that you code is implemented properly.
+
+## References
