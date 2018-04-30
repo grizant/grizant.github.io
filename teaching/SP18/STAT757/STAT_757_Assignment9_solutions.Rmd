@@ -1,0 +1,140 @@
+---
+title: "STAT 757 Assignment 9"
+subtitle: "DUE 4/29/2018 11:59PM"
+author: "AG Schissler"
+date: "2/14/2018"
+output: pdf_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Instructions [20 points]
+
+Modify this file to provide responses to the Ch.9 Exercises in @sheather2009. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter9.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter9.R). Also address the project milestones indicated below. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format SURNAME-FIRSTNAME-Assignment9.Rmd and SURNAME-FIRSTNAME-Assignment9.pdf.
+
+## Exercise 9.4.1 [60 points] 
+
+I will reproduce the plots and model summaries here and comment on each in turn.
+
+### Part A
+
+```{r, results = "hide", warning = FALSE, message = FALSE}
+myDir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data/"
+boxoffice <- read.table(file.path(myDir,"boxoffice.txt"), header = T)
+str(boxoffice)
+attach(boxoffice)
+library(nlme)
+```
+
+```{r}
+YearsS1975 <- year - 1975
+lsm1 <- lm(GrossBoxOffice~YearsS1975,data=boxoffice)
+StanRes1 <- rstandard(lsm1)
+par(mfrow=c(2,2))
+plot(YearsS1975,GrossBoxOffice,ylab="Gross Box Office ($M)",xlab="Years since 1975")
+abline(lsm1,lty=2)
+plot(YearsS1975,StanRes1,ylab="Standardized Residuals",xlab="Years since 1975")
+acf(StanRes1,main="Series Standardized Residuals")
+```
+
+The staffer corrected identified autocorrelation in the data, resulting in a poor fit for the ordinary least squares model.
+
+```{r}
+m1 <- gls(GrossBoxOffice~YearsS1975,correlation=corAR1(form=~YearsS1975),data=boxoffice,method="ML")
+summary(m1)
+```
+Nice job fitting an autocorrelation model with a lag 1 structure.
+
+```{r}
+#R output on page 327
+g <- lm(GrossBoxOffice~YearsS1975,data=boxoffice)
+rho <- 0.8782065
+x <- model.matrix(g)
+Sigma <- diag(length(YearsS1975))
+Sigma <- rho^abs(row(Sigma)-col(Sigma))
+sm <- chol(Sigma)
+smi <- solve(t(sm))
+xstar <- smi %*% x
+ystar <- smi %*% GrossBoxOffice
+m1tls <- lm(ystar ~ xstar-1) 
+summary(m1tls)
+```
+
+The transformation is correctly executed and the verification strategy is appropriate.
+
+```{r}
+#Figure 9.17 on page 328
+StanRes1 <- rstandard(m1tls)
+mres2 <- lm(StanRes1~m1tls$fitted.values+I(m1tls$fitted.values^2)+I(m1tls$fitted.values^3))
+b1 <- mres2$coeff[1]
+b2 <- mres2$coeff[2]
+b3 <- mres2$coeff[3]
+b4 <- mres2$coeff[4]
+mres3 <- lm(StanRes1~m1tls$fitted.values+I(m1tls$fitted.values^2)+I(m1tls$fitted.values^3)+I(m1tls$fitted.values^4)+I(m1tls$fitted.values^5))
+par(mfrow=c(1,2))
+plot(m1tls$fitted.values,StanRes1,ylab="Standardized LS Residuals",xlab="Fitted Values*")
+curve(b1 + b2*x + b3*x^2 + + b4*x^3, add = TRUE,lty=2)
+acf(StanRes1,main="Stand LS Residuals")
+```
+
+The analyst was doing a fine job up to this point. However, as pointed out on page 318 in @sheather2009, the first point in an AR(1) model is usually a high leverage point. The polynomial model was overfit to the first point, incorrectly showing a siginficant model. By removing the first point (only for demonstration/diagnostic purposes; i.e., the model includes the first point),
+
+```{r}
+mres4 <- lm(StanRes1[-1] ~ m1tls$fitted.values[-1]+
+                I(m1tls$fitted.values[-1]^2)+
+                I(m1tls$fitted.values[-1]^3)+
+                I(m1tls$fitted.values[-1]^4)+
+                I(m1tls$fitted.values[-1]^5))
+summary(mres4)
+```
+
+We see that the "distinct pattern" is no longer distinct even this highly responsive model is not significant by the ANOVA results.
+
+### Part B
+
+Note that the autocorrelation was removed by transformation above. Below are the Cholesky (normalized) residuals to help determine if the model is appropriately fit:
+
+```{r, fig.height=6}
+(chol_resid <- residuals(m1, type = "normalized"))
+par(mfrow=c(2,2))
+plot(chol_resid, xlab="YearsS1975", ylab="Cholesky Residuals")
+qqnorm(chol_resid);abline(0,1)
+```
+
+```{r}
+
+```
+I retain the first model (m1) as my final model as the residuals appear adequate except for some outliers. Indeed, years 9, 26, and 30 (which correspond to 1985, 2001, 2005) are outlying based on large standardized residuals. Perhaps with some transformation on the sales variable, the fit could be improved a little, but I would be satisified with m1.
+
+### Part C
+
+It is easier to interpret the prediction when using the non-transformed generalized least squares AR(1) model (m1).
+
+```{r}
+as.numeric(predict(m1, newdata = data.frame( YearsS1975 = 33)))
+```
+The predicted box office sales in 2008 is $898 million.
+
+### Part D
+
+No, as discussed above, the year 2000 only has a standardized residual approximately equal to -1. I suppose the effects of the olympics and tax law "cancelled each other out".
+
+## Project milestones [20 points]
+
+1. Interpret the results of your model in a draft results sections with preliminary figures.
+ * What interesting patterns do you observe? Anything surprising?
+ * How do the model results relate to your research question and hypothesis?
+ 
+## References
