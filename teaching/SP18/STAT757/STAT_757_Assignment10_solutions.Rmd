@@ -1,0 +1,186 @@
+---
+title: "STAT 757 Assignment 10"
+subtitle: "DUE 5/06/2018 11:59PM"
+author: "AG Schissler"
+date: "2/14/2018"
+output: html_document
+fig_caption: true
+exclude: true
+caption: true
+references:
+- id: sheather2009
+  title: A modern approach to regression with R
+  author:
+  - family: Sheather
+    given: Simon
+  publisher: Springer Science \& Business Media
+  type: book
+  issued:
+    year: 2009
+---
+
+## Instructions [20 points]
+
+Modify this file to provide responses to the Ch.10 Exercises in @sheather2009. You can find some helpful code here: [http://www.stat.
+tamu.edu/~sheather/book/docs/rcode/Chapter10.R](http://www.stat.tamu.edu/~sheather/book/docs/rcode/Chapter10.R). Also address the project milestones indicated below. Please email **both** your .Rmd (or roxygen .R) and one of the following either .HTML, .PDF, or .DOCX using the format SURNAME-FIRSTNAME-Assignment10.Rmd and SURNAME-FIRSTNAME-Assignment10.pdf.
+
+## Exercise 10.3.4 [60 points] 
+
+```{r, results = "hide", warning = FALSE, message = FALSE}
+myDir <- "~/OneDrive - University of Nevada, Reno/Teaching/STAT_757/Sheather_data/Data/"
+dat <- read.table(file.path(myDir,"sleepstudy.txt"), header = T)
+str(dat)
+attach(dat)
+library(nlme)
+```
+
+### Part A
+
+```{r, fig.height=5, keepaspectratio=TRUE}
+ggplot(dat, aes(x=Days, y=Reaction)) +
+    geom_point() +
+    scale_x_continuous(breaks=0:9) +
+    facet_wrap("Subject", labeller = label_both)
+```
+
+```{r}
+wide_data <- t( do.call( "rbind", split(Reaction, Days) ) )
+cor(wide_data)
+```
+
+```{r, fig.height=9, keepaspectratio=TRUE}
+pairs(~ ., data = wide_data, lower.panel=NULL)
+```
+
+It appears that conditional mean structure varies by subject, both in terms of random intercepts and slopes. Moreover, there appears to be periods within each subject with differing slopes, suggesting a spline modeling approach. The error covariance is not constant and as such a simple random intercept model is not sufficient (i.e., assuming constant correlation between any two time points). There are unusual data points for Subject 308, 332.
+
+### Part B (unstructured covariance)
+
+We fit model (10.17) from page 369 using the following code:
+
+```{r}
+m1 <- nlme::gls( Reaction~Days, data=dat,
+ correlation=corSymm(form=~1|Subject), weights=varIdent(form=~1|Days),method="REML")
+summary(m1)
+coef(m1)
+```
+
+```{r}
+resid1 <- residuals( m1, type="normalized" )
+plot( Days, resid1 )
+lines( lowess( Days, resid1, iter=1, f=1/3 ), lty=2 )
+```
+No pattern evident here.
+
+### Part C (random intercepts and slopes)
+
+```{r}
+m2 <- nlme::lme( Reaction~Days, data=dat, random= ~ 1 + Days |Subject, weights=varIdent(form=~1|Days), method="REML" )
+summary(m2)
+coef(m2)
+```
+
+Notice how the estimated error variance increases slightly with time.
+
+```{r}
+resid2 <- residuals( m2, type="normalized" )
+plot( Days, resid2 )
+lines( lowess( Days, resid2, iter=1, f=1/3 ), lty=2 )
+```
+No pattern evident here.
+
+```{r, fig.height=9, keepaspectratio=TRUE}
+plot(m2, form = Reaction ~ fitted(.) | Subject,layout = c(5,4), aspect = 1.0, abline = c(0,1))
+```
+
+### Part D (random intercepts)
+
+```{r}
+m3 <- nlme::lme( Reaction~Days, data=dat, random=~1|Subject, weights=varIdent(form=~1|Days), method="REML" )
+summary(m3)
+coef(m3)
+```
+
+```{r}
+resid3 <- residuals( m3, type="normalized" )
+plot( Days, resid3 )
+lines( lowess( Days, resid3, iter=1, f=1/3 ), lty=2 )
+```
+No pattern evident here.
+
+
+```{r, fig.height=9, keepaspectratio=TRUE}
+plot(m3, form = Reaction ~ fitted(.) | Subject ,layout = c(5,4), abline = c(0,1))
+```
+
+
+### Part D
+
+```{r}
+anova(m1,m2,m3)
+```
+
+Notably, all three models have the same fixed effects and so the results of the REML estimation procedure may be compared directly. The general covariance structure (compound symmetry; part B) has the largest log likelihood value. This indicates that the unstructured error covariance is preferred to the more restricted cases (Parts C and D). Among standard mixed models, the model with both random slopes and intercepts (part C) has a larger log likelihood. The standard errors are both small enough (due to the sample size in this case) to find significant fixed effects. Moreover, as pointed out in Exercise 10.3.2, smaller standard errors do not always correspond to a preferred model.
+
+### Part E
+
+Add the step functions.
+
+```{r}
+dat$DaysM1Plus <- Days - 1
+dat$DaysM1Plus[dat$DaysM1Plus < 0] <- 0
+dat$DaysM2Plus <- Days - 2
+dat$DaysM2Plus[dat$DaysM2Plus < 0] <- 0
+dat$DaysM3Plus <- Days - 3
+dat$DaysM3Plus[dat$DaysM3Plus < 0] <- 0
+dat$DaysM4Plus <- Days - 4
+dat$DaysM4Plus[dat$DaysM4Plus < 0] <- 0
+dat$DaysM5Plus <- Days - 5
+dat$DaysM5Plus[dat$DaysM5Plus < 0] <- 0
+dat$DaysM6Plus <- Days - 6
+dat$DaysM6Plus[dat$DaysM6Plus < 0] <- 0
+dat$DaysM7Plus <- Days - 7
+dat$DaysM7Plus[dat$DaysM7Plus < 0] <- 0
+dat$DaysM8Plus <- Days - 8
+dat$DaysM8Plus[dat$DaysM8Plus < 0] <- 0
+```
+
+```{r}
+m4 <- nlme::gls(Reaction~Days+DaysM1Plus+DaysM2Plus+DaysM3Plus+DaysM4Plus+DaysM5Plus+DaysM6Plus+DaysM7Plus+DaysM8Plus,
+data=dat,correlation=corSymm(form=~1|Subject),weights=varIdent(form=~1|Days),method="REML")
+summary(m4)
+```
+
+Different fixed effects! So to compare models use ML not REML.
+
+```{r}
+m5 <- nlme::gls(Reaction~Days+DaysM1Plus+DaysM2Plus+DaysM3Plus+DaysM4Plus+DaysM5Plus+DaysM6Plus+DaysM7Plus+DaysM8Plus,
+                data=dat,correlation=corSymm(form=~1|Subject),weights=varIdent(form=~1|Days),method="ML")
+m6 <- nlme::gls(Reaction~Days, data=dat,correlation=corSymm(form=~1|Subject),weights=varIdent(form=~1|Days),method="ML")
+anova(m5,m6)
+```
+Hmm, I did not reproduce the result that the new spline-based model is better. In fact, Days is no longer significant.
+
+Nonetheless, I will proceed with finding a reduced spline model.
+
+```{r}
+summary(m5)
+```
+
+Inspecting the (unadjusted) p-values for the step functions, we see that DaysM2Plus, DaysM3Plus, and DaysM4Plus are significant. Let's remove all others and compare the ML estimates.
+
+```{r}
+m7 <- nlme::gls(Reaction~Days+DaysM2Plus+DaysM3Plus+DaysM4Plus,
+                data=dat,correlation=corSymm(form=~1|Subject),weights=varIdent(form=~1|Days),method="ML")
+summary(m7)
+anova(m7,m5)
+```
+
+## Project milestones [20 points]
+
+1. Draft your discussion/conclusion.
+2. Revise your introduction.
+
+Make to address any loose ends before the final written report and presentation.
+ 
+## References
