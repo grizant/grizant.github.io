@@ -11,7 +11,8 @@ exclude: true
 - Textbook: None required
 - Office Hours: Tue 2:30pm-3:30pm, Wed 1:30pm-2:30pm, or by appointment in DMS 224
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/STAT445){:target="_blank"}
-- We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} extensively for online training modules in R.
+- We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} extensively for online training modules in R. Required and supplementary modules: [Located here](https://github.com/grizant/STAT445/blob/master/DataCamp/tex/STAT445-645-Intro-to-Stats-Computing-DataCampModules.pdf){:target="_blank"}. _last update: 27 Aug 2018_
+
 
 # Course tools and information
 - In DMSC 106, the computers will have all the software installed.<br/>(Please install on your personal machines as needed.)
