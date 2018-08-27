@@ -68,6 +68,6 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | **12**: Nov 12, 18 | Veteran's Day (no class)|  Simulation/probability| |
 | **13**: Nov 19, 21 | Monte Carlo integration/randomization tests|  Re-sampling (Bootstrap)| |
 | **14**: Nov 26, 28 | Maximum likelihood estimation (MLE)|  Lab| |
-| **15**: Dec 3, 5 | Markov Chain Monte Carlo (MCMC)|  Lab| |
-| **16**: Dec 10, 12 | Review/project presentations | Prep Day (no class) | |
+| **15**: Dec 3, 5 | Markov Chain Monte Carlo (MCMC)|  Lab| Project written report due 12/7/18<br/>[Project written report rubric](https://github.com/grizant/STAT445/blob/master/rubrics/Final_project_written_rubric.pdf){:target="_blank"}|
+| **16**: Dec 10, 12 | Review/project presentations | Prep Day (no class) | [Project presentation rubric](https://github.com/grizant/STAT445/blob/master/rubrics/Final_project_written_rubric.pdf){:target="_blank"}|
 | **17**: Dec 17, 19 | Finals week (no class) |  Final exam (12:10pm - 2:10pm) | |
