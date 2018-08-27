@@ -5,8 +5,8 @@ exclude: true
 ---
 
 - Lectures: 2:30pm-3:45am, Mon & Wed, 27 Aug -  May, 2018 in [DMS](http://www.unr.edu/around-campus/facilities/davidson){:target="_blank"} 106 ([map](https://www.google.com/maps/place/Davidson+Mathematics+%26+Science+Center,+Reno,+NV+89557){:target="_blank"})
-- Tenative syllabus: Click [here to download (PDF)](STAT445-645-Intro-to-Stats-Computing-syllabus.pdf){:target="_blank"}.
-- Gradebook: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
+- Syllabus: [Located here](https://github.com/grizant/STAT445/blob/master/syllabus/tex/STAT445-645-Intro-to-Stats-Computing-syllabus.pdf){:target="_blank"}. _last update: 27 Aug 2018_
+- Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: None required
 - Office Hours: Tue 2:30pm-3:30pm, Wed 1:30pm-2:30pm, or by appointment in DMS 224
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/STAT445){:target="_blank"}
@@ -52,20 +52,20 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Aug 27, 29 | Introduction <br/> [blended instruction](https://www.youtube.com/watch?v=paQCE58334M){:target="_blank"}| Basic data structures| [Prob-distributions.pdf](/resources/prob-distributions.pdf){:target="_blank"}<br/>Assignment1.Rmd|
-| **2**: Sep 3, 5 | Labor Day (no class) |  Indexing/Iteration| |
-| **3**: Sep 10, 12 | Text manipulation |  Lab| |
-| **4**: Sep 17, 19 | Data frames and apply |  Lab| |
-| **5**: Sep 24, 26 | Review session |  Midterm 1| |
-| **6**: Oct 1, 3 | Data Viz|  Lab| |
-| **7**: Oct 8, 10 | Functions|  Lab| |
-| **8**: Oct 15, 17 | Simulation (Monte Carlo)|  Lab| |
-| **9**: Oct 22, 24 | Importing data|  Lab| |
-| **10**: Oct 29, 31 | Review session|  Midterm 2| |
-| **11**: Nov 5, 7 | Split-apply-combine/parallelization|  Lab| |
-| **12**: Nov 12, 18 | Veteran's Day (no class)|  Fitting models/prediction| |
-| **13**: Nov 19, 21 | Monte Carlo integration/inference|  Lab| |
-| **14**: Nov 26, 28 | Bootstrap/jackknife|  Lab| |
-| **15**: Dec 3, 5 | Optimization/Maximum likelihood estimation (MLE)|  Lab| |
-| **16**: Dec 10, 12 | Markov Chain Monte Carlo (MCMC)|  Lab and project presentations | |
+| **1**: Aug 27, 29 | Course structure<br/>R/RStudio/RMarkdown/git | Data structures in R| |
+| **2**: Sep 3, 5 | Labor Day (no class) |  Conditional, flow| |
+| **3**: Sep 10, 12 | Loops, functions, apply | Lab| |
+| **4**: Sep 17, 19 | Writing functions (advanced) | Lab | |
+| **5**: Sep 24, 26 | Writing efficient R Code (e.g., parallel) | Lab | |
+| **6**: Oct 1, 3 | Review|  Midterm 1| |
+| **7**: Oct 8, 10 | Importing data |  Lab| |
+| **8**: Oct 15, 17 | Cleaning data|  Lab| |
+| **9**: Oct 22, 24 | Exploratory Data Analysis (EDA)|  Lab| |
+| **10**: Oct 29, 31 | Data viz/grammar of graphics (ggplot2)|  Lab| |
+| **11**: Nov 5, 7 | Review|  Midterm 2| |
+| **12**: Nov 12, 18 | Veteran's Day (no class)|  Simulation/probability| |
+| **13**: Nov 19, 21 | Monte Carlo integration/randomization tests|  Re-sampling (Bootstrap)| |
+| **14**: Nov 26, 28 | Maximum likelihood estimation (MLE)|  Lab| |
+| **15**: Dec 3, 5 | Markov Chain Monte Carlo (MCMC)|  Lab| |
+| **16**: Dec 10, 12 | Review/project presentations | Prep Day (no class) | |
 | **17**: Dec 17, 19 | Finals week (no class) |  Final exam (12:10pm - 2:10pm) | |
