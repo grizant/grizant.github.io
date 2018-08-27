@@ -6,6 +6,7 @@ exclude: true
 
 - Lectures: 2:30pm-3:45am, Mon & Wed, 27 Aug -  May, 2018 in [DMS](http://www.unr.edu/around-campus/facilities/davidson){:target="_blank"} 106 ([map](https://www.google.com/maps/place/Davidson+Mathematics+%26+Science+Center,+Reno,+NV+89557){:target="_blank"})
 - Syllabus: [Located here](https://github.com/grizant/STAT445/blob/master/syllabus/tex/STAT445-645-Intro-to-Stats-Computing-syllabus.pdf){:target="_blank"}. _last update: 27 Aug 2018_
+- Detailed course learning outcomes: [Located here](https://github.com/grizant/STAT445/blob/master/course_outcomes/tex/STAT445-645-Intro-to-Stats-Computing-course_outcomes.pdf){:target="_blank"}. _last update: 27 Aug 2018_
 - Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: None required
 - Office Hours: Tue 2:30pm-3:30pm, Wed 1:30pm-2:30pm, or by appointment in DMS 224
