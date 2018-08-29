@@ -55,7 +55,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Aug 27, 29 | Course structure<br/>R/RStudio/RMarkdown/git | Data structures in R| [lesson_plan_1_intro.pdf](https://github.com/grizant/STAT445/blob/master/lesson1_intro/tex/lesson_plan_1_intro.pdf){:target="_blank"}<br/>[intro.Rmd](https://github.com/grizant/STAT445/blob/master/lesson1_intro/rmd/intro.Rmd){:target="_blank"}|
+| **1**: Aug 27, 29 | Course structure<br/>R/RStudio/RMarkdown/git | Data structures in R| [lesson_plan_1_intro.pdf](https://github.com/grizant/STAT445/blob/master/lesson1_intro/tex/lesson_plan_1_intro.pdf){:target="_blank"}<br/>[intro.Rmd](https://github.com/grizant/STAT445/blob/master/lesson1_intro/rmd/intro.Rmd){:target="_blank"}<br/>[lesson2_data_structures.Rmd](https://github.com/grizant/STAT445/blob/master/lesson2_data_strutures/rmd/lesson2_data_structures.Rmd){:target="_blank"}<br/>[lesson2_data_structures.html](lesson2_data_structures.html){:target="_blank"}|
 | **2**: Sep 3, 5 | Labor Day (no class) |  Conditional, flow| [lesson3_flow.Rmd](https://github.com/grizant/STAT445/blob/master/lesson3_flow/rmd/lesson3_flow.Rmd){:target="_blank"}<br/>[lesson3_flow.html](lesson3_flow.html){:target="_blank"}|
 | **3**: Sep 10, 12 | Loops, functions, apply | Lab| |
 | **4**: Sep 17, 19 | Writing functions (advanced) | Lab | |
