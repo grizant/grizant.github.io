@@ -9,7 +9,7 @@ exclude: true
 - Detailed course learning outcomes: [Located here](https://github.com/grizant/STAT445/blob/master/course_outcomes/tex/STAT445-645-Intro-to-Stats-Computing-course_outcomes.pdf){:target="_blank"}. _last update: 29 Aug 2018_
 - Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: None required
-- Office Hours: Tue 2:30pm-3:30pm, Wed 1:30pm-2:30pm, or by appointment in DMS 224
+- Office Hours: Tue 4pm-5pm, Wed 1:30pm-2:30pm, or by appointment in DMS 224
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/STAT445){:target="_blank"}
 - We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} extensively for online training modules in R. Required and supplementary modules: [Located here](https://github.com/grizant/STAT445/blob/master/DataCamp/tex/STAT445-645-Intro-to-Stats-Computing-DataCampModules.pdf){:target="_blank"}. _last update: 27 Aug 2018_
 
