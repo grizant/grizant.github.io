@@ -6,7 +6,7 @@ exclude: true
 
 I'll introduce Bayesian statistics using similar topics in an upper-level classical (frequentist) statistics course. We'll focus on statistical inference using Bayes' Theorem for familiar continuous and discrete random variables (such as Normal and binomial), while comparing Bayesian to classical approaches throughout. Near the end of the course, we'll touch on modern Bayesian computation to apply theory to real data, including Markov Chain Monte Carlo (MCMC) posterior sampling.
 
-- Lectures: 1:00pm-3:45am, Mon & Wed, 22 Jan - 7 May, 2018 in AB 635.
+- Lectures: 1:00pm-2:15am, Mon & Wed, 22 Jan - 7 May, 2018 in AB 635.
 - Syllabus: [Located here](https://github.com/grizant/Intro_Bayes_Course/blob/develop/syllabus/STAT446-646-Intro-to-Bayesian-Statistics-syllabus.pdf){:target="_blank"}. _last update: 27 Sep 2018_
 - Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: _Introduction to Bayesian Statistics_, 3rd edition, by William M. Bolstad, James M. Curran
