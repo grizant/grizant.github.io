@@ -7,7 +7,7 @@ title: Teaching
 
 ## [STAT 429-629 Intro to Bayesian Statistics](SP19/STAT429/)
 
-Introductory statistical inference through Bayesian modeling with comparisons to frequentist methods. Brief intro to MCMC and advanced computing.
+Statistical inference using Bayes' Theorem. Topics include Bayesian/frequentist comparison, posterior analysis for continuous and discrete random variables, prior specification, Bayesian regression, multivariate inference, and posterior sampling through Markov Chain Monte Carlo.
 
 ## Fall 2018
 
