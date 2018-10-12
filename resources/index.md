@@ -18,6 +18,7 @@ permalink: /resources/
 ## Computing and reproducible research
 
 - [R](https://www.r-project.org/){:target="_blank"}
+- [UNR's R Bootcamp](http://naes.unr.edu/shoemaker/teaching/R-Bootcamp/index.html){:target="_blank"}
 - [RStudio](https://www.rstudio.com/){:target="_blank"} 
 - Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com)
 - UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/){:target="_blank"} for tons of great information. 
