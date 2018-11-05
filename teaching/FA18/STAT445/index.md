@@ -65,7 +65,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | **8**: Oct 15, 17 | 14:Cleaning and exploring data| 15:Lab 05| [lab_05_numeric_explore_apply.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_05_numeric_explore_apply.Rmd){:target="_blank"}<br/>[lab_05_numeric_explore_apply.html](https://github.com/grizant/STAT445/blob/master/labs/lab_05_numeric_explore_apply.html)|
 | **9**: Oct 22, 24 | 16:Exploratory Data Analysis (EDA)|  17:Lab 06| [lab_06_base_graphics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_06_base_graphics.Rmd){:target="_blank"}<br/>[lab_06_base_graphics.html](lab_06_base_graphics.html){:target="_blank"}<br/>(last update 22 Oct 2018)|
 | **10**: Oct 29, 31 | 18:Data viz/grammar of graphics (ggplot2)| 19:Lab 07| [lab_07_ggplot2_graphics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_07_ggplot2_graphics.Rmd){:target="_blank"}<br/>[lab_07_ggplot2_graphics.html](https://github.com/grizant/STAT445/blob/master/labs/lab_07_ggplot2_graphics.html)|
-| **11**: Nov 5, 7 | 20:Review|  21:Midterm 2| |
+| **11**: Nov 5, 7 | 20:Review|  21:Midterm 2| [lesson20_midterm2_review.Rmd](https://github.com/grizant/STAT445/blob/master/lesson20_midterm2_review/lesson20_midterm2_review.Rmd){:target="_blank"}<br/>[lesson20_midterm2_review.html](lesson20_midterm2_review.html){:target="_blank"} |
 | **12**: Nov 12, 18 | Veteran's Day (no class)|  22:Simulation/probability| |
 | **13**: Nov 19, 21 | 23:Monte Carlo integration/randomization tests| 24:Lab 08| | 
 | **14**: Nov 26, 28 | 25:Re-sampling (Bootstrap) | 26:Lab 09 |  |
