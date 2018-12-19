@@ -28,8 +28,48 @@ I'll introduce Bayesian statistics using similar topics in an upper-level classi
 - Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
+# Schedule and course materials 
 
-# Project resourcs
+This section is subject to change and will be updated regularly.   
+For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#2018-2019){:target="_blank"}.
+
+| Date | In-class agenda | Reading work due | Written work due | Online work due |
+|:---:|:---:|:---:|:---:|:---:|
+| 1/21/19 (--)| No class (MLK Day)| --- | --- | --- |
+| 1/23/19 (1)| Assessment blueprint(link) | Read syllabus, website | None | Accept invite to DataCamp |
+| 1/28/19 (2)| Probability | Ch.4 | None | DataCamp Introduction to R |
+| 1/30/19 (3)| Probability | None | None | DataCamp Foundations of probability in R |
+| 2/04/19 (4)| Discrete RVs | Ch.5 | HW 1 | None  |
+| 2/06/19 (5)| Discrete RVs | None | None | None  |
+| 2/11/19 (6)| Discrete RVs| Ch.6  | HW 2 | None |
+| 2/13/19 (7)| **Midterm 1**| None | None | None |
+| 2/18/19 (--)| No class (Presidents' Day)| --- | --- | --- |
+| 2/20/19 (8)| Continuous RVs | Ch.7 | HW 3 | None |
+| 2/25/19 (9)| Continuous RVs | Ch.8 | HW 4 | None |
+| 2/27/19 (10)| Continuous RVs | None | None | None |
+| 3/04/19 (11)| Continuous RVs | Ch.9 | HW 5 | None  |
+| 3/06/19 (12)| Continuous RVs | None | None | None |
+| 3/11/19 (13)| Continuous RVs | Ch.10 | HW 6 | None |
+| 3/13/19 (14)| **Midterm 2**| None | None | None |
+| 3/18/19 (--)| No class (Spring break)|  |  |  |
+| 3/20/19 (--)| No class (Spring break)|  |  |  |
+| 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7 | None |
+| 3/27/19 (16)| Continuous RVs II | None | None | DataCamp Fundamentals of Bayesian Analysis in R |
+| 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8 | None |
+| 4/03/19 (18)| Continuous RVs II | None | None | None |
+| 4/08/19 (19)| Continuous RVs II | Ch.13 | HW 9 | None |
+| 4/10/19 (20)| **Midterm 3** | None | None | None |
+| 4/15/19 (21)| Regression | Ch.14 | HW 10 | None |
+| 4/17/19 (22)| Regression | None | None | None |
+| 4/22/19 (23)| Computing/MCMC| Ch.20 | HW 11 | None |
+| 4/24/19 (24)| Computing/MCMC| None | None | None |
+| 4/29/19 (25)| Computing/MCMC| None| HW 12 | None |
+| 5/01/19 (26)| **Midterm 4**| None | None | None |
+| 5/06/19 (27)| 629 project presentations | None | 629 project slides due | None |
+| 5/08/19 (--)| No class (Prep day)| --- | --- | --- |
+| 5/13/19 (28)| **Final exam** (9:50am - 11:50am) | None | None | None |
+
+# Project resources
 
 - UNR's Dr. Paul Hurtado's Data Resource page:[http://pauljhurtado.com/data/](http://pauljhurtado.com/data/){:target="_blank"}
 
@@ -51,26 +91,3 @@ Genomics and cancer resources:
 
 - NIH NCI Genomics Data Commons: [https://gdc.cancer.gov/](https://gdc.cancer.gov/){:target="_blank"}
 - The Cancer Genome Atlas (TCGA): [https://cancergenome.nih.gov/](https://cancergenome.nih.gov/){:target="_blank"}
-
-# Schedule (subject to change and will be updated regularly)
-For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#2018-2019){:target="_blank"}.
-
-| Week | Monday | Wednesday| Notes & materials |
-|---|:---:|:---:|---:|
-| **1**: | | |
-| **2**: | | |
-| **3**: | | |
-| **4**: | | |
-| **5**: | | |
-| **6**: | | |
-| **7**: | | |
-| **8**: | | |
-| **9**: | | |
-| **10**: | | |
-| **11**: | | |
-| **12**: | | |
-| **13**: | | |
-| **14**: | | |
-| **15**: | | |
-| **16**: | | |
-| **17**: | | |
