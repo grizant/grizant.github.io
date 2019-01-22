@@ -1,32 +1,19 @@
 ---
 layout: page
-title: STAT 429-629 Intro to Bayesian Statistics
+title: STAT 429/629 Intro to Bayesian Statistics
 exclude: true
 ---
 
 I'll introduce Bayesian statistics using similar topics in an upper-level classical (frequentist) statistics course. We'll focus on statistical inference using Bayes' Theorem for familiar continuous and discrete random variables (such as Normal and binomial), while comparing Bayesian to classical approaches throughout. Near the end of the course, we'll touch on modern Bayesian computation to apply theory to real data, including Markov Chain Monte Carlo (MCMC) posterior sampling.
 
-- Lectures: 1:00pm-2:15am, Mon & Wed, 22 Jan - 7 May, 2018 in AB 635.
-- Syllabus: [Located here](https://github.com/grizant/Intro_Bayes_Course/blob/develop/syllabus/STAT446-646-Intro-to-Bayesian-Statistics-syllabus.pdf){:target="_blank"}. _last update: 27 Sep 2018_
-- Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
+- Lectures: 1:00pm-2:15am, Mon & Wed, 22 Jan - 7 May, 2019 in AB 206.
+- Syllabus: [Located here](https://github.com/grizant/Intro_Bayes_Course/blob/develop/syllabus/STAT446-646-Intro-to-Bayesian-Statistics-syllabus.pdf){:target="_blank"}. _last update: 21 Jan 2019_
+- Course announcements, official assignments, due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: _Introduction to Bayesian Statistics_, 3rd edition, by William M. Bolstad, James M. Curran
 [Textbook website](https://www.wiley.com/en-us/Introduction+to+Bayesian+Statistics%2C+3rd+Edition-p-9781118091562){:target="_blank"}
-- Office Hours: TBD or by appointment in DMS 224
+- Office Hours: Tue 3-4pm, Wed 2:30-3:30pm or by appointment in DMS 224
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/Intro_Bayes_Course/tree/develop){:target="_blank"}
 - We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} for online training modules in R.
-
-
-# Course tools and information
-- In DMSC 106, the computers will have all the software installed.<br/>(Please install on your personal machines as needed.)
-- R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
-- R Coding style guidelines from Advanced R by H.~Wickham: [http://adv-r.had.co.nz/Style.html](http://adv-r.had.co.nz/Style.html){:target="_blank"}
-- If you want to use RMarkdown to produce a PDF, you must install LaTeX on your machine. Click [this page for instructions](http://www.pauljhurtado.com/latex/){:target="_blank"}.
-- See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/){:target="_blank"} for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/){:target="_blank"}.
-- Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com){:target="_blank"}
-- RStudio cheatsheets (many are highly useful, the old version of the Rmarkdown is recommended): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
-- Great introduction to statistics by Prof Joe Watkins at the University of Ariziona: [Stat Course](http://math.arizona.edu/~jwatkins/math363s17.htm){:target="_blank"}. Make sure to check out his book linked on that page.
-- Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
-- Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
 # Schedule and course materials 
 
@@ -35,8 +22,8 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 
 | Date | In-class agenda | Reading work due | Written work due | Online work due |
 |:---:|:---:|:---:|:---:|:---:|
-| 1/21/19 (--)| No class (MLK Day)| --- | --- | --- |
-| 1/23/19 (1)| Assessment blueprint(link) | Read syllabus, website | None | Accept invite to DataCamp |
+| 1/21/19 (--)| No class <br/> (MLK Day)| --- | --- | --- |
+| 1/23/19 (1)| 1_intro.Rmd <br/>1_intro.html | Read Ch. 1-3, syllabus, website | Bring syllabus to class (soft or hard copy) | Accept invite to DataCamp |
 | 1/28/19 (2)| Probability | Ch.4 | None | DataCamp Introduction to R |
 | 1/30/19 (3)| Probability | None | None | DataCamp Foundations of probability in R |
 | 2/04/19 (4)| Discrete RVs | Ch.5 | HW 1 | None  |
@@ -51,8 +38,8 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 3/06/19 (12)| Continuous RVs | None | None | None |
 | 3/11/19 (13)| Continuous RVs | Ch.10 | HW 6 | None |
 | 3/13/19 (14)| **Midterm 2**| None | None | None |
-| 3/18/19 (--)| No class (Spring break)|  |  |  |
-| 3/20/19 (--)| No class (Spring break)|  |  |  |
+| 3/18/19 (--)| No class <br/>(Spring break)|  |  |  |
+| 3/20/19 (--)| No class <br/>(Spring break)|  |  |  |
 | 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7 | None |
 | 3/27/19 (16)| Continuous RVs II | None | None | DataCamp Fundamentals of Bayesian Analysis in R |
 | 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8 | None |
@@ -66,8 +53,19 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 4/29/19 (25)| Computing/MCMC| None| HW 12 | None |
 | 5/01/19 (26)| **Midterm 4**| None | None | None |
 | 5/06/19 (27)| 629 project presentations | None | 629 project slides due | None |
-| 5/08/19 (--)| No class (Prep day)| --- | --- | --- |
-| 5/13/19 (28)| **Final exam** (9:50am - 11:50am) | None | None | None |
+| 5/08/19 (--)| No class <br/>(Prep day)| --- | --- | --- |
+| 5/13/19 (28)| **Final exam** (9:50am - 11:50am) | None | None | **Take-home** <br/>Do *not* report to class. |
+
+# Course tools and information
+- R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
+- R Coding style guidelines from Advanced R by H.~Wickham: [http://adv-r.had.co.nz/Style.html](http://adv-r.had.co.nz/Style.html){:target="_blank"}
+- If you want to use RMarkdown to produce a PDF, you must install LaTeX on your machine. Click [this page for instructions](http://www.pauljhurtado.com/latex/){:target="_blank"}.
+- See UNR's [Dr. Paul Hurtado's R page](http://www.pauljhurtado.com/R/){:target="_blank"} for tons of great information. <br/> And/or the textbook author's R tutorials: [dist.stat.tamu.edu/pub/rvideos/](http://dist.stat.tamu.edu/pub/rvideos/){:target="_blank"}.
+- Rmarkdown Resources: [rmarkdown.rstudio.com](http://rmarkdown.rstudio.com){:target="_blank"}
+- RStudio cheatsheets (many are highly useful, the old version of the Rmarkdown is recommended): [www.rstudio.com/resources/cheatsheets/](https://www.rstudio.com/resources/cheatsheets/){:target="_blank"}
+- Great introduction to statistics by Prof Joe Watkins at the University of Ariziona: [Stat Course](http://math.arizona.edu/~jwatkins/math363s17.htm){:target="_blank"}. Make sure to check out his book linked on that page.
+- Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
+- Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
 # Project resources
 
