@@ -12,7 +12,7 @@ I'll introduce Bayesian statistics using similar topics in an upper-level classi
 - Textbook: _Introduction to Bayesian Statistics_, 3rd edition, by William M. Bolstad, James M. Curran
 [Textbook website](https://www.wiley.com/en-us/Introduction+to+Bayesian+Statistics%2C+3rd+Edition-p-9781118091562){:target="_blank"}
 - Office Hours: Tue 3-4pm, Wed 2:30-3:30pm or by appointment in DMS 224
-- GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/Intro_Bayes_Course/tree/develop){:target="_blank"}
+- GitHub repo for course-specific materials: [https://github.com/grizant/Intro_Bayes_Course](https://github.com/grizant/Intro_Bayes_Course/tree/develop){:target="_blank"}
 - We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} for online training modules in R.
 
 # Schedule and course materials 
