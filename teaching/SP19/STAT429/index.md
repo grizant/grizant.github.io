@@ -23,7 +23,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | Date | In-class agenda | Reading work due | Written work due | Online work due |
 |:---:|:---:|:---:|:---:|:---:|
 | 1/21/19 (--)| No class <br/> (MLK Day)| --- | --- | --- |
-| 1/23/19 (1)| 1_intro.Rmd <br/>1_intro.html | Read Ch. 1-3, syllabus, website | Bring syllabus to class (soft or hard copy) | Accept invite to DataCamp |
+| 1/23/19 (1)| [1_intro.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/1_intro.Rmd){:target="_blank"} <br/>[1_intro.html](1_intro.html){:target="_blank"} | Read Ch. 1-3, syllabus, website | Bring syllabus to class (soft or hard copy) | Accept invite to DataCamp |
 | 1/28/19 (2)| Probability | Ch.4 | None | DataCamp Introduction to R |
 | 1/30/19 (3)| Probability | None | None | DataCamp Foundations of probability in R |
 | 2/04/19 (4)| Discrete RVs | Ch.5 | HW 1 | None  |
