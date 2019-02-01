@@ -26,7 +26,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 1/23/19 (1)| Introduction to the class [1_intro.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/1_intro.Rmd){:target="_blank"} <br/>[1_intro.html](1_intro.html){:target="_blank"} | Read Ch. 1-3, syllabus, website | Bring syllabus to class (soft or hard copy) | Accept invite to DataCamp |
 | 1/28/19 (2)| Intro to probability [2_prob_intro.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/2_prob_intro.Rmd){:target="_blank"} <br/>[2_prob_intro.html](2_prob_intro.html){:target="_blank"} | Ch.4 | None | DataCamp Introduction to R |
 | 1/30/19 (3)| Conditional probability and Bayes' Theorem [3_prob_cond_bayes.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/3_prob_cond_bayes.Rmd){:target="_blank"} <br/>[3_prob_cond_bayes.html](3_prob_cond_bayes.html){:target="_blank"} | None | None | DataCamp Foundations of probability in R |
-| 2/04/19 (4)| Discrete RVs | Ch.5 | HW 1 | None  |
+| 2/04/19 (4)| Discrete RVs | Ch.5 | HW 1<br/>[HW1_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW1_rubric.pdf){:target="_blank"} | None  |
 | 2/06/19 (5)| Discrete RVs | None | None | None  |
 | 2/11/19 (6)| Discrete RVs| Ch.6  | HW 2 | None |
 | 2/13/19 (7)| **Midterm 1**| None | None | None |
