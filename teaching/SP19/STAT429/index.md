@@ -31,10 +31,10 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 2/11/19 (6)| Discrete RVs<br/>[6_bayes_inference_discrete.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/6_bayes_inference_discrete.Rmd){:target="_blank"} <br/>[6_bayes_inference_discrete.html](6_bayes_inference_discrete.html){:target="_blank"}| Ch.6  | HW 2<br/>[HW2_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW2_rubric.pdf){:target="_blank"} | None |
 | 2/13/19 (7)| **Midterm 1**<br/>[7_midterm_one.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/7_midterm_one.Rmd){:target="_blank"} <br/>[7_midterm_one.html](7_midterm_one.html){:target="_blank"}| None | None | None |
 | 2/18/19 (--)| No class (Presidents' Day)| --- | --- | --- |
-| 2/20/19 (8)| Continuous RVs | Ch.7 | HW 3<br/>[HW3_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW3_rubric.pdf){:target="_blank"} | None |
+| 2/20/19 (8)| Continuous RVs<br/>[8_cont_rvs.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/8_cont_rvs.Rmd){:target="_blank"} <br/>[8_cont_rvs.html](8_cont_rvs.html){:target="_blank"} | None |
 | 2/25/19 (9)| Continuous RVs | Ch.8 | HW 4<br/>[HW4_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW4_rubric.pdf){:target="_blank"} | None |
 | 2/27/19 (10)| Continuous RVs | None | None | None |
-| 3/04/19 (11)| Continuous RVs | Ch.9 | HW 5 | None  |
+| 3/04/19 (11)| Continuous RVs <br/> **Project proposal presentations** | Ch.9 | HW 5 | None  |
 | 3/06/19 (12)| Continuous RVs | None | None | None |
 | 3/11/19 (13)| Continuous RVs | Ch.10 | HW 6 | None |
 | 3/13/19 (14)| **Midterm 2**| None | None | None |
@@ -52,9 +52,9 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 4/24/19 (24)| Computing/MCMC| None | None | None |
 | 4/29/19 (25)| Computing/MCMC| None| HW 12 | None |
 | 5/01/19 (26)| **Midterm 4**| None | None | None |
-| 5/06/19 (27)| 629 project presentations | None | 629 project slides due | None |
+| 5/06/19 (27)| Miscellaneous/catch-up | None | None | None |
 | 5/08/19 (--)| No class <br/>(Prep day)| --- | --- | --- |
-| 5/13/19 (28)| **Final exam** (9:50am - 11:50am) | None | None | **Take-home** <br/>Do *not* report to class. |
+| 5/13/19 (28)| **Final exam period** <br/>(9:50am - 11:50am) | None | None | **Take-home exam** <br/> Project presentations or project sesssion |
 
 # Course tools and information
 - R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
