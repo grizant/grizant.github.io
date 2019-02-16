@@ -31,7 +31,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 2/11/19 (6)| Discrete RVs<br/>[6_bayes_inference_discrete.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/6_bayes_inference_discrete.Rmd){:target="_blank"} <br/>[6_bayes_inference_discrete.html](6_bayes_inference_discrete.html){:target="_blank"}| Ch.6  | HW 2<br/>[HW2_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW2_rubric.pdf){:target="_blank"} | None |
 | 2/13/19 (7)| **Midterm 1**<br/>[7_midterm_one.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/7_midterm_one.Rmd){:target="_blank"} <br/>[7_midterm_one.html](7_midterm_one.html){:target="_blank"}| None | None | None |
 | 2/18/19 (--)| No class (Presidents' Day)| --- | --- | --- |
-| 2/20/19 (8)| Continuous RVs<br/>[8_cont_rvs.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/8_cont_rvs.Rmd){:target="_blank"} <br/>[8_cont_rvs.html](8_cont_rvs.html){:target="_blank"} | None |
+| 2/20/19 (8)| Continuous RVs<br/>[8_cont_rvs.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/8_cont_rvs.Rmd){:target="_blank"} <br/>[8_cont_rvs.html](8_cont_rvs.html){:target="_blank"} | Ch.7| HW 3<br/>[HW3_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW3_rubric.pdf){:target="_blank"} | None |
 | 2/25/19 (9)| Continuous RVs | Ch.8 | HW 4<br/>[HW4_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW4_rubric.pdf){:target="_blank"} | None |
 | 2/27/19 (10)| Continuous RVs | None | None | None |
 | 3/04/19 (11)| Continuous RVs <br/> **Project proposal presentations** | Ch.9 | HW 5 | None  |
