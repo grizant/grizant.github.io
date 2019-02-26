@@ -32,29 +32,29 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 2/13/19 (7)| **Midterm 1**<br/>[7_midterm_one.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/7_midterm_one.Rmd) <br/>[7_midterm_one.html](7_midterm_one.html)| None | None | None |
 | 2/18/19 (--)| No class (Presidents' Day)| --- | --- | --- |
 | 2/20/19 (8)| Continuous RVs<br/>[8_cont_rvs.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/8_cont_rvs.Rmd) <br/>[8_cont_rvs.html](8_cont_rvs.html) | Ch.7| HW 3<br/>[HW3_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW3_rubric.pdf) | None |
-| 2/25/19 (9)| Continuous RVs<br/>[9_inference_bin_priors.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/9_inference_bin_priors.Rmd) <br/>[9_inference_bin_priors.html](9_inference_bin_priors.html) | Ch.8 | HW 4<br/>[HW4_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW4_rubric.pdf) | None |
+| 2/25/19 (9)| Continuous RVs<br/>[9_inference_bin_priors.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/9_inference_bin_priors.Rmd) <br/>[9_inference_bin_priors.html](9_inference_bin_priors.html) | Ch.8 | HW 4<br/>[HW4_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW4_rubric.pdf)<br/>**Project task 1**<br/>[Intro-to-Bayesian-Statistics_project_organization.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/course_materials/Intro-to-Bayesian-Statistics_project_organization.pdf) | None |
 | 2/27/19 (10)| Continuous RVs<br/>[10_inference_bin_posteriorSummaries.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/10_inference_bin_posteriorSummaries.Rmd) <br/>[10_inference_bin_posteriorSummaries.html](10_inference_bin_posteriorSummaries.html) | None | None | None |
-| 3/04/19 (11)| Continuous RVs <br/> **Project proposal presentations** | Ch.9 | HW 5<br/>[HW5_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW5_rubric.pdf) | None  |
-| 3/06/19 (12)| Continuous RVs | None | None | None |
+| 3/04/19 (11)| Continuous RVs <br/> **Project proposal presentations** | Ch.9 | HW 5<br/>[HW5_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW5_rubric.pdf)<br/>**Project task 2** | None  |
+| 3/06/19 (12)| Continuous RVs | None | **Project task 3** | None |
 | 3/11/19 (13)| Continuous RVs | Ch.10 | HW 6 | None |
-| 3/13/19 (14)| **Midterm 2**| None | None | None |
+| 3/13/19 (14)| **Midterm 2**| None | **Project task 4** | None |
 | 3/18/19 (--)| No class <br/>(Spring break)|  |  |  |
 | 3/20/19 (--)| No class <br/>(Spring break)|  |  |  |
 | 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7 | None |
 | 3/27/19 (16)| Continuous RVs II | None | None | DataCamp Fundamentals of Bayesian Analysis in R |
 | 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8 | None |
 | 4/03/19 (18)| Continuous RVs II | None | None | None |
-| 4/08/19 (19)| Continuous RVs II | Ch.13 | HW 9 | None |
+| 4/08/19 (19)| Continuous RVs II | Ch.13 | HW 9<br/>**Project task 5** | None |
 | 4/10/19 (20)| **Midterm 3** | None | None | None |
 | 4/15/19 (21)| Regression | Ch.14 | HW 10 | None |
-| 4/17/19 (22)| Regression | None | None | None |
+| 4/17/19 (22)| Regression | None | **Project task 6** | None |
 | 4/22/19 (23)| Computing/MCMC| Ch.20 | HW 11 | None |
 | 4/24/19 (24)| Computing/MCMC| None | None | None |
-| 4/29/19 (25)| Computing/MCMC| None| HW 12 | None |
+| 4/29/19 (25)| Computing/MCMC| None| HW 12<br/>**Project task 7** | None |
 | 5/01/19 (26)| **Midterm 4**| None | None | None |
 | 5/06/19 (27)| Miscellaneous/catch-up | None | None | None |
 | 5/08/19 (--)| No class <br/>(Prep day)| --- | --- | --- |
-| 5/13/19 (28)| **Final exam period** <br/>(9:50am - 11:50am) | None | None | **Take-home exam** <br/> Project presentations or project sesssion |
+| 5/13/19 (28)| **Final exam period** <br/>(9:50am - 11:50am) | None | **Project task 8** | **Take-home exam** <br/> Project presentations or project sesssion |
 
 # Course tools and information
 - R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
