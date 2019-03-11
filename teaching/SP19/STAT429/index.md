@@ -36,11 +36,11 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 2/27/19 (10)| Continuous RVs<br/>[10_inference_bin_posteriorSummaries.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/10_inference_bin_posteriorSummaries.Rmd) <br/>[10_inference_bin_posteriorSummaries.html](10_inference_bin_posteriorSummaries.html) | None | None | None |
 | 3/04/19 (11)| Continuous RVs <br/> **Project proposal presentations** <br/>[11_grad_proposals_compare_pointEst_bin.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/11_grad_proposals_compare_pointEst_bin.Rmd) <br/>[11_grad_proposals_compare_pointEst_bin.html](11_grad_proposals_compare_pointEst_bin.html)| Ch.9 | HW 5<br/>[HW5_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW5_rubric.pdf)<br/>**Project task 2** | None  |
 | 3/06/19 (12)| Continuous RVs<br/>[12_compare_intervals_hypTesting_bin.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/12_compare_intervals_hypTesting_bin.Rmd) <br/>[12_compare_intervals_hypTesting_bin.html](12_compare_intervals_hypTesting_bin.html) | None | **Project task 3** | None |
-| 3/11/19 (13)| Continuous RVs | Ch.10 | None | None |
-| 3/13/19 (14)| **Midterm 2**| None |HW 6<br/>[HW6_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW6_rubric.pdf)<br/>**Project task 4 due by 3/15/19** | None |
+| 3/11/19 (13)| Continuous RVs<br/>[13_bayes_inference_poisson.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/13_bayes_inference_poisson.Rmd) <br/>[13_bayes_inference_poisson.html](13_bayes_inference_poisson.html) | Ch.10 | None | None |
+| 3/13/19 (14)| **Midterm 2**<br/>[14_midterm_two.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/14_midterm_two.Rmd) <br/>[14_midterm_two.html](14_midterm_two.html)| None |HW 6<br/>[HW6_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW6_rubric.pdf)<br/>**Project task 4 due by 3/15/19** | None |
 | 3/18/19 (--)| No class <br/>(Spring break)|  |  |  |
 | 3/20/19 (--)| No class <br/>(Spring break)|  |  |  |
-| 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7 | None |
+| 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7<br/>[HW7_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW7_rubric.pdf) | None |
 | 3/27/19 (16)| Continuous RVs II | None | None | DataCamp Fundamentals of Bayesian Analysis in R |
 | 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8 | None |
 | 4/03/19 (18)| Continuous RVs II | None | None | None |
