@@ -42,7 +42,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 3/20/19 (--)| No class <br/>(Spring break)|  |  |  |
 | 3/25/19 (15)| Continuous RVs II | Ch.11 | HW 7<br/>[HW7_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW7_rubric.pdf) | None |
 | 3/27/19 (16)| Continuous RVs II | None | None | DataCamp Fundamentals of Bayesian Analysis in R |
-| 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8 | None |
+| 4/01/19 (17)| Continuous RVs II | Ch.12 | HW 8<br/>[HW8_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW8_rubric.pdf) | None |
 | 4/03/19 (18)| Continuous RVs II | None | None | None |
 | 4/08/19 (19)| Continuous RVs II | Ch.13 | HW 9<br/>**Project task 5** | None |
 | 4/10/19 (20)| **Midterm 3** | None | None | None |
