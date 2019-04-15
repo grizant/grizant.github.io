@@ -46,9 +46,9 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 4/03/19 (18)| Continuous RVs II<br/>[18_compare_bayes_freq_mean_2.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/18_compare_bayes_freq_mean_2.Rmd)<br/>[18_compare_bayes_freq_mean_2.html](18_compare_bayes_freq_mean_2.html) | None | None | None |
 | 4/08/19 (19)| Continuous RVs II<br/>[19_bayes_inference_diff_mean.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/19_bayes_inference_diff_mean.Rmd)<br/>[19_bayes_inference_diff_mean.html](19_bayes_inference_diff_mean.html) | Ch.13 | HW 9 <br/>[HW9_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW9_rubric.pdf) | None |
 | 4/10/19 (20)| **Midterm 3**<br/>[20_midterm_three.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/20_midterm_three.Rmd) <br/>[20_midterm_three.html](20_midterm_three.html) | None | None | None |
-| 4/15/19 (21)| Regression | Ch.14 | HW 10<br/>[HW10_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW10_rubric.pdf)<br/>**Project task 5** | None |
+| 4/15/19 (21)| Regression<br/>[21_bayes_inference_simple_regression.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/21_bayes_inference_simple_regression.Rmd) <br/>[21_bayes_inference_simple_regression.html](21_bayes_inference_simple_regression.html) | Ch.14 | HW 10<br/>[HW10_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW10_rubric.pdf)<br/>**Project task 5** | None |
 | 4/17/19 (22)| Regression | None | None | None |
-| 4/22/19 (23)| Computing/MCMC| Ch.20 | HW 11<br/>**Project task 6** | None |
+| 4/22/19 (23)| Computing/MCMC| Ch.20 | HW 11<br/>[HW11_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW11_rubric.pdf)<br/>**Project task 6** | None |
 | 4/24/19 (24)| Computing/MCMC| None | None | None |
 | 4/29/19 (25)| Computing/MCMC| None| HW 12<br/>**Project task 7** | None |
 | 5/01/19 (26)| **Midterm 4**| None | None | None |
