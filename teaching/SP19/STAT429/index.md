@@ -49,12 +49,12 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 4/15/19 (21)| Regression<br/>[21_bayes_inference_simple_regression.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/21_bayes_inference_simple_regression.Rmd) <br/>[21_bayes_inference_simple_regression.html](21_bayes_inference_simple_regression.html) | Ch.14 | HW 10<br/>[HW10_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW10_rubric.pdf)<br/>**Project task 5** | None |
 | 4/17/19 (22)| Regression<br/>[22_bayes_inference_simple_regression_2.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/22_bayes_inference_simple_regression_2.Rmd) <br/>[22_bayes_inference_simple_regression_2.html](22_bayes_inference_simple_regression_2.html) | None | None | None |
 | 4/22/19 (23)| Computational Bayes<br/>[23_computational_bayes.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/23_computational_bayes.Rmd) <br/>[23_computational_bayes.html](23_computational_bayes.html)| Ch.20 | HW 11<br/>[HW11_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW11_rubric.pdf) | None |
-| 4/24/19 (24)| Markov Chain Monte Carlo (MCMC)| None | None | None |
-| 4/29/19 (25)| Computing/MCMC| None| HW 12<br/>**Project task 6** | None |
-| 5/01/19 (26)| **Midterm 4**| None | None | None |
-| 5/06/19 (27)| Miscellaneous/catch-up | None | <br/>**Project task 7** | None |
+| 4/24/19 (24)| Markov Chain Monte Carlo (MCMC)<br/>[24_mcmc_metropolis_hastings.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/24_mcmc_metropolis_hastings.Rmd)<br/>[24_mcmc_metropolis_hastings.html](24_mcmc_metropolis_hastings.html)| None | None | None |
+| 4/29/19 (25)| Gibbs sampling| None| **Project task 6** | None |
+| 5/01/19 (26)| **Midterm 4**| None | HW 12 | None |
+| 5/06/19 (27)| Hamiltonian Monte Carlo (HMC)| None | <br/>**Project task 7** | **Take-home exam released**|
 | 5/08/19 (--)| No class <br/>(Prep day)| --- | --- | --- |
-| 5/13/19 (28)| **Final exam period** <br/>(9:50am - 11:50am) | None | **Project task 8** | **Take-home exam** <br/> Project presentations or project sesssion |
+| 5/13/19 (28)| **Final exam period: Poster session** <br/>(9:50am - 11:50am) | None | **Project task 8** | **Take-home exam**|
 
 # Course tools and information
 - R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
