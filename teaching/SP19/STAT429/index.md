@@ -54,7 +54,7 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 | 5/01/19 (26)| **Midterm 4**<br/>[26_midterm_four.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/meeting_agendas/26_midterm_four.Rmd) <br/>[26_midterm_four.html](26_midterm_four.html)| None | HW 12<br/>[homework12_Bolstad_ch20.Rmd](https://github.com/grizant/Intro_Bayes_Course/blob/develop/homeworks/homework12_Bolstad_ch20.Rmd)<br/>[homework12_Bolstad_ch20.pdf](homework12_Bolstad_ch20.pdf)<br/>[HW12_rubric.pdf](https://github.com/grizant/Intro_Bayes_Course/blob/develop/rubrics/HW12_rubric.pdf)| None |
 | 5/06/19 (27)| Hamiltonian Monte Carlo (HMC)| None | <br/>**Project task 7** | **Take-home exam released**|
 | 5/08/19 (--)| No class <br/>(Prep day)| --- | --- | --- |
-| 5/13/19 (28)| **Final exam period: Poster session** <br/>(9:50am - 11:50am) | None | **Project task 8** | **Take-home exam**|
+| 5/13/19 (28)| **Final exam period: Poster session** <br/>(9:50am - 11:50am)<br/>[poster_guidelines.pdf](poster_guidelines.pdf)<br/>[poster_rubric.pdf](poster_rubric.pdf) | None | **Project task 8** | **Take-home exam**|
 
 # Course tools and information
 - R: Install [R](http://www.r-project.org/) first, then install [RStudio](http://www.rstudio.com/).<br/>(Alternatively, advanced users could use other IDEs with markdown support such as [Emacs](https://www.gnu.org/software/emacs/) with [ESS-mode](https://ess.r-project.org/) and [org-mode](https://orgmode.org/), but this is not recommended for new users and will not be supported during instruction.)
