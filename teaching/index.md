@@ -2,20 +2,26 @@
 layout: page
 title: Teaching
 ---
- 
-## Spring 2019
 
-## [STAT 429-629 Intro to Bayesian Statistics](SP19/STAT429/)
+## Fall 2019
+
+## [STAT 445-645 Intro to Statistical Computing](FA19/STAT445/)
+
+Statistical computing in R including statistical inference via Monte Carlo.
+
+## Previous courses
+
+### Spring 2019
+
+#### [STAT 429-629 Intro to Bayesian Statistics](SP19/STAT429/)
 
 Statistical inference using Bayes' Theorem. Topics include Bayesian/frequentist comparison, posterior analysis for continuous and discrete random variables, prior specification, Bayesian regression, multivariate inference, and posterior sampling through Markov Chain Monte Carlo.
 
-## Fall 2018
+### Fall 2018
 
-## [STAT 445-645 Intro to Statistical Computing](FA18/STAT445/)
+#### [STAT 445-645 Intro to Statistical Computing](FA18/STAT445/)
 
 Basics of R and statistical inference through Monte Carlo techniques.
-
-## Previous courses
 
 ### Summer 2018
 
