@@ -5,13 +5,13 @@ exclude: true
 ---
 
 - Lectures: 2:30pm-3:45am, Mon & Wed, 26 Aug - 9 May 2019 in [DMS](http://www.unr.edu/around-campus/facilities/davidson){:target="_blank"} 106 ([map](https://www.google.com/maps/place/Davidson+Mathematics+%26+Science+Center,+Reno,+NV+89557){:target="_blank"})
-- Syllabus: [Located here](https://github.com/grizant/STAT445/blob/master/syllabus/tex/STAT445-645-Intro-to-Stats-Computing-syllabus.pdf){:target="_blank"}. _last update: 23 Aug 2019_
-- Detailed course learning outcomes: [Located here](https://github.com/grizant/STAT445/blob/master/course_outcomes/tex/STAT445-645-Intro-to-Stats-Computing-course_outcomes.pdf){:target="_blank"}. _last update: 29 Aug 2018_
+- Syllabus: [Located here](https://github.com/grizant/STAT445/blob/master/syllabus/tex/STAT445-645-Intro-to-Stats-Computing-syllabus.pdf){:target="_blank"}. _last update: 27 Aug 2019_
+- Detailed course learning outcomes: [Located here](https://github.com/grizant/STAT445/blob/master/course_outcomes/tex/STAT445-645-Intro-to-Stats-Computing-course_outcomes.pdf){:target="_blank"}. _last update: 26 Aug 2019_
 - Course announcements, official assignments, work due dates, work submissions, grades, discussion: [Webcampus](http://tlt.unr.edu/materials/login-canvas.html){:target="_blank"}
 - Textbook: None required
-- Office Hours: Wed 4:00pm-5:00pm, Thu 2:30pm-3:30pm or by appointment in DMS 224
+- Office Hours: Tue 4:00pm-5:00pm, Wed 4pm-5pm or by appointment in DMS 224
 - GitHub repo for course-specific materials: [https://github.com/grizant/STAT445](https://github.com/grizant/STAT445){:target="_blank"}
-- We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} extensively for online training modules in R. Required and supplementary modules: [Located here](https://github.com/grizant/STAT445/blob/master/DataCamp/tex/STAT445-645-Intro-to-Stats-Computing-DataCampModules.pdf){:target="_blank"}. _last update: 27 Aug 2018_
+- We'll use [Datacamp](https://www.datacamp.com/){:target="_blank"} extensively for online training modules in R. Required and supplementary modules: [Located here](https://github.com/grizant/STAT445/blob/master/DataCamp/tex/STAT445-645-Intro-to-Stats-Computing-DataCampModules.pdf){:target="_blank"}. _last update: 27 Aug 2019_
 
 
 # Course tools and information
@@ -31,22 +31,22 @@ For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/a
 
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Aug 26, 28 | 1:Course structure<br/>R/RStudio/RMarkdown/git | 2:Data structures in R| [1_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/1_intro.Rmd){:target="_blank"}<br/>[lesson2_data_structures.Rmd](https://github.com/grizant/STAT445/blob/master/lesson2_data_strutures/rmd/lesson2_data_structures.Rmd){:target="_blank"}<br/>[1_intro.html](1_intro.html){:target="_blank"}|
-| **2**: Sep 2, 4 | Labor Day (no class) |  3:Conditional, flow| |
-| **3**: Sep 9, 11 | 4:Lab 01 |5:Loops, functions, apply (Lab 01 con'd) | |
-| **4**: Sep 16, 18 | 6:Writing functions (advanced) | 7:Lab 02 | |
-| **5**: Sep 23, 25 | 8:Writing efficient R Code (e.g., parallel) Lab 03| 9:Lab 03 | |
-| **6**: Sep 30, Oct 2 | 10:Review|  11:Midterm 1 ||
-| **7**: Oct 7, 9 | 12:Importing data |  13:Lab 04| |
-| **8**: Oct 14, 16 | 14:Cleaning and exploring data| 15:Lab 05| |
-| **9**: Oct 21, 23 | 16:Exploratory Data Analysis (EDA)|  17:Lab 06| |
-| **10**: Oct 28, 30 | 18:Data viz/grammar of graphics (ggplot2)| 19:Lab 07| |
-| **11**: Nov 4, 6 | 20:Review|  21:Midterm 2| |
-| **12**: Nov 11, 13 | Veteran's Day (no class)|  22:Simulation/probability| |
-| **13**: Nov 18, 20 | 23:Monte Carlo integration/randomization tests| 24:Lab 08 (Due 12/2/18)| |
-| **14**: Nov 25, 27 | 25:Resampling (Bootstrap) | 26: Optimization and Maximum likelihood estimation (MLE)| |
-| **15**: Dec 2, 4 | 27:Markov Chain Monte Carlo (MCMC) | 28: Lab 09 Bootstrap, MLE, MCMC||
-| **16**: Dec 9, 11 | 29:Projects poster session/celebration | Prep Day (no class) | |
+| **1**: Aug 26, 28 | **Unit 1 (R Basics)** Meeting 1: Intro<br/> | 2:Tools/standards/Lab 01 R Basics| [1_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/01_intro.Rmd){:target="_blank"}<br/>[1_intro.html](01_intro.html){:target="_blank"}|
+| **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01| |
+| **3**: Sep 9, 11 | 4: Lab 02 Functions (con'd) |5: Lab 02 | |
+| **4**: Sep 16, 18 | 6: Lab 03 t-test, parallel, text | 7: Lab 03 | |
+| **5**: Sep 23, 25 | 8: Lab 03| 9: Lab 03 | |
+| **6**: Sep 30, Oct 2 | 10: **Midterm 1**|  11: **Unit 2 (Working with Data)**  ||
+| **7**: Oct 7, 9 | 12: Lab 04: Importing, cleaning data| 13: Lab 04 ||
+| **8**: Oct 14, 16 | 14: Lab 05 numeric summary, apply| 15: Lab 05| |
+| **9**: Oct 21, 23 | 16: Lab 06 Base graphics|  17:Lab 06| |
+| **10**: Oct 28, 30 | 18: Lab 07 Data viz/grammar of graphics (ggplot2)|19: Lab 07 |  |
+| **11**: Nov 4, 6 | 20: **Midterm 2**|  21: **Unit 3 (Simulation and Inference)**| |
+| **12**: Nov 11, 13 | Veteran's Day (no class)|  22: Lab 08 Monte Carlo Studies (Simulation)| |
+| **13**: Nov 18, 20 | 23: Lab 08 | 24: Lab 08| |
+| **14**: Nov 25, 27 | 25: Lab 09 Fitting models/prediction | 26: Lab 09| |
+| **15**: Dec 2, 4 | 27: Lab 10 Bootstrap, MLE, MCMC | 28: Lab 10 ||
+| **16**: Dec 9, 11 | 29: Projects poster session/celebration | Prep Day (no class) | |
 | **17**: Dec 16, 18 | Finals week (no class) |  **No meeting during final exam period** |
 
 # Project resourcs
