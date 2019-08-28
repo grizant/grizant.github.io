@@ -27,11 +27,11 @@ exclude: true
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
 # Schedule (subject to change and will be updated regularly)
-For other important dates see the UNR [2018-2019 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#2018-2019){:target="_blank"}.
+For other important dates see the UNR [2019-2020 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#2019-2020){:target="_blank"}.
 
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
-| **1**: Aug 26, 28 | **Unit 1 (R Basics)** Meeting 1: Intro<br/> | 2:Tools/standards/Lab 01 R Basics| [1_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/01_intro.Rmd){:target="_blank"}<br/>[1_intro.html](01_intro.html){:target="_blank"}|
+| **1**: Aug 26, 28 | **Unit 1 (R Basics)** Meeting 1: Intro<br/> | 2:Tools/standards/Lab 01 R Basics| [01_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/01_intro.Rmd){:target="_blank"}<br/>[01_intro.html](01_intro.html){:target="_blank"}<br/>[02_assignments_Rmd_lab01.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/02_assignments_Rmd_lab01.Rmd){:target="_blank"}<br/>[02_assignments_Rmd_lab01.html](02_assignments_Rmd_lab01.html){:target="_blank"}<br/>[lab_01_rbasics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_01_rbasics.Rmd){:target="_blank"}<br/>[lab_01_rbasics.html](lab_01_rbasics.html){:target="_blank"}|
 | **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01| |
 | **3**: Sep 9, 11 | 4: Lab 02 Functions (con'd) |5: Lab 02 | |
 | **4**: Sep 16, 18 | 6: Lab 03 t-test, parallel, text | 7: Lab 03 | |
