@@ -32,7 +32,7 @@ For other important dates see the UNR [2019-2020 Calendar](https://www.unr.edu/a
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
 | **1**: Aug 26, 28 | **Unit 1 (R Basics)** Meeting 1: Intro<br/> | 2:Tools/standards/Lab 01 R Basics| [01_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/01_intro.Rmd){:target="_blank"}<br/>[01_intro.html](01_intro.html){:target="_blank"}<br/>[02_assignments_Rmd_lab01.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/02_assignments_Rmd_lab01.Rmd){:target="_blank"}<br/>[02_assignments_Rmd_lab01.html](02_assignments_Rmd_lab01.html){:target="_blank"}<br/>[lab_01_rbasics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_01_rbasics.Rmd){:target="_blank"}<br/>[lab_01_rbasics.html](lab_01_rbasics.html){:target="_blank"}|
-| **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01| |
+| **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01| [lab_02_functions.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_02_functions.Rmd){:target="_blank"}<br/>[lab_02_functions.html](lab_02_functions.html){:target="_blank"}|
 | **3**: Sep 9, 11 | 4: Lab 02 Functions (con'd) |5: Lab 02 | |
 | **4**: Sep 16, 18 | 6: Lab 03 t-test, parallel, text | 7: Lab 03 | |
 | **5**: Sep 23, 25 | 8: Lab 03| 9: Lab 03 | |

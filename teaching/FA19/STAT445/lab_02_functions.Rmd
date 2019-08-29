@@ -1,0 +1,133 @@
+---
+title: "Lab 02: Functions and the prostate cancer set"
+author: "AG Schissler (modified from Ryan Tibshirani)"
+date: "Due of 9/22/2019"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE, autodep=TRUE, cache.comments=TRUE)
+```
+
+Name:  
+NSHE ID:  
+Collaborated with:  
+
+This lab is to be done in class (completed outside of class if need be). You can collaborate with your classmates, but you must identify their names above, and you must submit **your own** lab as an knitted HTML file and raw Rmd file on Canvas, by Sunday 9/22, 11:59pm.
+
+This lab starts the analysis of a prostate cancer data set and we'll come back to it later.
+
+## Huber loss function
+
+The Huber loss function (or just Huber function, for short) is defined as:
+$$
+\psi(x) = \begin{cases}
+x^2 & \text{if $|x| \leq 1$} \\
+2|x| - 1 & \text{if $|x| > 1$} 
+\end{cases}
+$$
+This function is quadratic on the interval [-1,1], and linear outside of this interval. It transitions from quadratic to linear "smoothly".
+
+It is often used in place of the usual squared error loss for robust estimation. The sample average, $\bar{X}$---which given a sample $X_1,\ldots,X_n$ minimizes the squared error loss $\sum_{i=1}^n (X_i-m)^2$ over all choices of $m$---can be inaccurate as an estimate of $\mathbb{E}(X)$ if the distribution of $X$ is heavy-tailed. In such cases, minimizing Huber loss can give a better estimate.
+
+### Some function tasks
+
+- **1a.** Write a function `huber()` that takes as an input a number $x$, and returns the Huber value $\psi(x)$, as defined above. Hint: the body of a function is just a block of R code, i.e., in this code you can use `if()` and `else()` statements. Check that `huber(1)` returns 1, and `huber(4)` returns 7.
+
+- **1b.** The Huber function can be modified so that the transition from quadratic to linear happens at an arbitrary cutoff value $a$, as in:
+$$
+\psi_a(x) = \begin{cases}
+x^2 & \text{if $|x| \leq a$} \\
+2a|x| - a^2 & \text{if $|x| > a$} 
+\end{cases}
+$$
+Starting with your solution code to the last question, update your `huber()` function so that it takes two arguments: $x$, a number at which to evaluate the loss, and $a$ a number representing the cutoff value. It should now return $\psi_a(x)$, as defined above. Check that `huber(3, 2)` returns 8, and `huber(3, 4)` returns 9.
+
+- **1c.** Update your `huber()` function so that the default value of the cutoff $a$ is 1. Check that `huber(3)` returns 5. 
+
+- **1d.** Check that `huber(a=1, x=3)` returns 5. Check that `huber(1, 3)` returns 1. Explain why these are different.
+
+- **1e.** Vectorize your `huber()` function, so that the first input can actually be a vector of numbers, and what is returned is a vector whose elements give the Huber evaluated at each of these numbers. Hint: you might try using `ifelse()`, if you haven't already, to vectorize nicely. Check that `huber(x=1:6, a=3)` returns the vector of numbers (1, 4, 9, 15, 21, 27).
+
+- **Challenge.** Your instructor computed the Huber function values $\psi_a(x)$ over a bunch of different $x$ values, stored in `huber_vals` and `x_vals`, respectively. However, the cutoff $a$ was, let's say, lost. Using `huber_vals`, `x_vals`, and the definition of the Huber function, you should be able to figure out the cutoff value $a$, at least roughly. Estimate $a$ and explain how you got there. Hint: one way to estimate $a$ is to do so visually, using plotting tools; there are other ways too.
+
+```{r}
+x.vals = seq(0, 5, length=21)
+huber_vals = c(0.0000, 0.0625, 0.2500, 0.5625, 1.0000, 1.5625, 2.2500,
+               3.0625, 4.0000, 5.0625, 6.2500, 7.5625, 9.0000, 10.5000,
+               12.0000, 13.5000, 15.0000, 16.5000, 18.0000, 19.5000, 
+               21.0000)
+```
+
+## Prostate cancer data set
+
+We're going to look at a data set on 97 men who have prostate cancer (from the book [The Elements of Statistical Learning](http://statweb.stanford.edu/~hastie/ElemStatLearn/)). There are 9 variables measured on these 97 men:
+
+1. `lpsa`: log PSA score
+2. `lcavol`: log cancer volume
+3. `lweight`: log prostate weight
+4. `age`: age of patient
+5. `lbph`: log of the amount of benign prostatic hyperplasia
+6. `svi`: seminal vesicle invasion
+7. `lcp`: log of capsular penetration
+8. `gleason`: Gleason score 
+9. ` pgg45`: percent of Gleason scores 4 or 5 
+
+To load this prostate cancer data set into your R session, and store it as a matrix `pros_dat`:
+
+```{r}
+pros_dat <-
+  as.matrix(read.table("http://www.stat.cmu.edu/~ryantibs/statcomp/data/pros.dat"))
+```
+
+### Basic indexing and calculations
+
+- **2a.** What are the dimensions of `pros_dat` (i.e., how many rows and how many columns)? Using integer indexing, print the first 6 rows and all columns; again using integer indexing, print the last 6 rows and all columns. 
+
+- **2b.** Using the built-in R functions `head()` and `tail()` (i.e., do *not* use integer indexing), print the first 6 rows and all columns, and also the last 6 rows and all columns.
+
+- **2c.** Does the matrix `pros_dat` have names assigned to its rows and columns, and if so, what are they? Use `rownames()` and `colnames()` to find out. Note: these would have been automatically created by the `read.table()` function that we used above to read the data file into our R session. To see where `read.table()` would have gotten these names from, open up the data file: http://www.stat.cmu.edu/~ryantibs/statcomp/data/pros.dat in your web browser. Only the column names here are actually informative.
+
+- **2d.** Using named indexing, pull out the two columns of `pros_dat` that measure the log cancer volume and the log cancer weight, and store the result as a matrix `pros_dat_sub`. (Recall the explanation of variables at the top of this lab.) Check that its dimensions make sense to you, and that its first 6 rows are what you'd expect. Did R automatically assign column names to `pros_dat_sub`?
+
+- **2e.** Using the log cancer weights and log cancer volumes, calculate and store the log cancer density for the 97 men in the data set (note: by density here we mean weight divided by volume). Finally, display the first 6 values. 
+
+- **2f.** Append the log cancer density to the columns of `pros_dat`, using `cbind()`. The new `pros_dat` matrix should now have 10 columns. Set the last column name to be `ldens`. Print its first 6 rows, to check that you've done all this right.
+
+### Exploratory data analysis with plots
+
+- **3a.** Using `hist()`, produce a histogram of the log cancer volume measurements of the 97 men in the data set; also produce a histogram of the log cancer weight. In each case, use `breaks=20` as an arugment to `hist()`. Comment just briefly on the distributions you see. Then, using `plot()`, produce a scatterplot of the log cancer volume (y-axis) versus the log cancer weight (x-axis). Do you see any kind of relationship? Would you expect to? **Challenge**: how would you measure the strength of this relationship formally? Note that there is certainly more than one way to do so. We'll talk about statistical modeling tools later in the course.
+
+- **3b.** Produce scatterplots of log cancer weight versus age, and log cancer volume versus age. Do you see relationships here between the age of a patient and the volume/weight of his cancer?
+
+- **3c.** Produce a histogram of the log cancer density, and a scatterplot of the log cancer density versus age. Comment on any similarities/differences you see between these plots, and the corresponding ones you produced above for log cancer volume/weight.
+
+- **3d.** Delete the last column, corresponding to the log cancer density, from the `pros_dat` matrix, using negative integer indexing.
+
+### A bit of Boolean indexing never hurt anyone
+
+- **4a.** The `svi` variable in the `pros_dat` matrix is binary: 1 if the patient had a condition called "seminal vesicle invasion" or SVI, and 0 otherwise. SVI (which means, roughly speaking, that the cancer invaded into the muscular wall of the seminal vesicle) is bad: if it occurs, then it is believed the prognosis for the patient is poorer, and even once/if recovered, the patient is more likely to have prostate cancer return in the future. Compute a Boolean vector called `has_svi`, of length 97, that has a `TRUE` element if a row (patient) in `pros_dat` has SVI, and `FALSE` otherwise. Then using `sum()`, figure out how many patients have SVI.
+
+- **4b.** Extract the rows of `pros_dat` that correspond to patients with SVI, and the rows that correspond to patients without it. Call the resulting matrices `pros_dat_svi` and `pros_dat_no_svi`, respectively. You can do this in two ways: using the `has_svi` Boolean vector created above, or using on-the-fly Boolean indexing, it's up to you. Check that the dimensions of `pros_dat_svi` and `pros_dat_no_svi` make sense to you.
+
+- **4c.** Using the two matrices `pros_dat_svi` and `pros_dat_no_svi` that you created above, compute the means of each variable in our data set for patients with SVI, and for patients without it. Store the resulting means into vectors called `pros_dat_svi_avg` and `pros_dat_no_svi_avg`, respectively. Hint: for each matrix, you can compute the means with a single call to a built-in R function. What variables appear to have different means between the two groups? 
+
+### Computing standard deviations using iteration
+
+- **5a.** Take a look at the starter code below. The first line defines an empty vector `pros_dat_svi_sd` of length `ncol(pros_dat)` (of length 9). The second line defines an index variable `i` and sets it equal to 1. Write a third line of code to compute the standard deviation of the `i`th column of `pros_dat_svi`, using a built-in R function, and store this value in the `i`th element of `pros_dat_svi_sd`. 
+ 
+```{r}
+pros_dat_svi_sd = vector(length=ncol(pros_dat))
+i = 1
+```
+
+- **5b.** Repeat the calculation as in the previous question, but for patients without SVI. That is, produce three lines of code: the first should define an empty vector `pros_dat_no_svi_sd` of length `ncol(pros_dat)` (of length 9), the second should define an index variable `i` and set it equal to 1, and the third should fill the `i`th element of `pros_dat_no_svi_sd` with the standard deviation of the `i`th column of `pros_dat_no_svi`.
+
+- **5c.** Write a `for()` loop to compute the standard deviations of the columns of `pros_dat_svi` and `pros_dat_no_svi`, and store the results in the vectors `pros_dat_svi_sd` and `pros_dat_no_svi_sd`, respectively, that were created above. Note: you should have a single `for()` loop here, not two for loops. And if it helps, consider breaking this task down into two steps: as the first step, write a `for()` loop that iterates an index variable `i` over the integers between 1 and the number of columns of `pros_dat` (don't just manually write 9 here, pull out the number of columns programmatically), with an empty body. As the second step, paste relevant pieces of your solution code from Q5a and Q5b into the body of the `for()` loop. Print out the resulting vectors `pros_dat_svi_sd` and `pros_dat_no_svi_sd` to the console. Comment, just briefly (informally), by visually inspecting these standard deviations and the means you computed in Q4c: which variables exhibit large differences in means between the SVI and non-SVI patients, relative to their standard deviations?
+
+- **5d.** The starter code below partially computes to calculate the standard deviations of the columns of `pros.dat.svi` and `pros_dat_no_svi`, and stores them in `pros_dat_svi_sd_master` and `pros_dat_no_svi_sd_master`, respectively, using `apply()`. Remove `eval=FALSE` as an option to the Rmd code chunk and complete the code. Then check using `all.equal()` that the standard deviations you computed in the previous question equal these "master" copies. Note: use `check.names=FALSE` as a third argument to `all.equal()`, which instructs it to ignore the names of its first two arguments. (If `all.equal()` doesn't succeed in both cases, then you must have done something wrong in computing the standard deviations, so go back and fix them!)
+
+```{r, eval=FALSE}
+pros_dat_svi_sd_master = apply(pros_dat_svi, MARGIN = , FUN = )
+pros_dat_no_svi_sd_master = apply(pros_dat_no_svi, MARGIN = , FUN = )
+```
