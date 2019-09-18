@@ -26,27 +26,37 @@ exclude: true
 - Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
+# Rubrics, checklists, templates
+
+- [Lab rubric](https://github.com/grizant/STAT445/blob/master/rubrics/lab_rubric.pdf)
+- [Lab checklist](https://github.com/grizant/STAT445/blob/master/checklists/lab_checklist.pdf)
+- [Project  tasks](https://github.com/grizant/STAT445/blob/master/project/Intro-to-Stats-Comp_project_organization.pdf)
+- [Poster guidelines](https://github.com/grizant/STAT445/blob/master/project/poster_guidelines.pdf)
+- [Poster rubric](https://github.com/grizant/STAT445/blob/master/project/poster_rubric.pdf)
+- [sample_lab_report.Rmd](https://github.com/grizant/STAT445/blob/master/labs/sample_lab_report.Rmd)
+- [sample_lab_report.html](sample_lab_report.html)
+
 # Schedule (subject to change and will be updated regularly)
 For other important dates see the UNR [2019-2020 Calendar](https://www.unr.edu/academic-central/academic-resources/academic-calendar#2019-2020){:target="_blank"}.
 
 | Week | Monday | Wednesday| Notes & materials |
 |---|:---:|:---:|---:|
 | **1**: Aug 26, 28 | **Unit 1 (R Basics)** Meeting 1: Intro<br/> | 2:Tools/standards/Lab 01 R Basics| [01_intro.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/01_intro.Rmd){:target="_blank"}<br/>[01_intro.html](01_intro.html){:target="_blank"}<br/>[02_assignments_Rmd_lab01.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/02_assignments_Rmd_lab01.Rmd){:target="_blank"}<br/>[02_assignments_Rmd_lab01.html](02_assignments_Rmd_lab01.html){:target="_blank"}<br/>[lab_01_rbasics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_01_rbasics.Rmd){:target="_blank"}<br/>[lab_01_rbasics.html](lab_01_rbasics.html){:target="_blank"}|
-| **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01| |
+| **2**: Sep 2, 4 | Labor Day (no class) |  3: Lab 01|[03_RStudio_projects_AKnudson.Rmd.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/03_RStudio_projects_AKnudson.Rmd){:target="_blank"}<br/>[03_RStudio_projects_AKnudson.html](03_RStudio_projects_AKnudson.html){:target="_blank"} |
 | **3**: Sep 9, 11 | 4: Lab 02 Functions (con'd) |5: Lab 02 | [lab_02_functions.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_02_functions.Rmd){:target="_blank"}<br/>[lab_02_functions.html](lab_02_functions.html){:target="_blank"}|
-| **4**: Sep 16, 18 | 6: Functions Lab 02   | 7: Lab 02 | [06_functions_lab02.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/06_functions_lab02.Rmd){:target="_blank"}<br/>[06_functions_lab02.html](06_functions_lab02.html){:target="_blank"}<br/>[lab_03_ttest_text_parallel.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_03_ttest_text_parallel.Rmd){:target="_blank"}<br/>[lab_03_ttest_text_parallel.html](lab_03_ttest_text_parallel.html){:target="_blank"}|
-| **5**: Sep 23, 25 | 8: Lab 03 t-test, parallel, text | 9: Lab 03 | |
-| **6**: Sep 30, Oct 2 | 10: **Midterm 1**|  11: **Unit 2 (Working with Data)**  ||
-| **7**: Oct 7, 9 | 12: Lab 04: Importing, cleaning data| 13: Lab 04 ||
+| **4**: Sep 16, 18 | 6: Functions Lab 02   | 7: Lab 02 | [06_functions_lab02.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/06_functions_lab02.Rmd){:target="_blank"}<br/>[06_functions_lab02.html](06_functions_lab02.html){:target="_blank"}<br/>[07_projects_lab02.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/07_projects_lab02.Rmd){:target="_blank"}<br/>[07_projects_lab02.html](07_projects_lab02.html){:target="_blank"}|
+| **5**: Sep 23, 25 | 8: Lab 03 t-test, parallel, text | 9: Lab 03<br/>*Grad project teams due* | [lab_03_ttest_text_parallel.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_03_ttest_text_parallel.Rmd){:target="_blank"}<br/>[lab_03_ttest_text_parallel.html](lab_03_ttest_text_parallel.html){:target="_blank"}|
+| **6**: Sep 30, Oct 2 | 10: **Midterm 1**|  11: **Start Unit 2<br/>(Working with Data)**<br/>*Grad project proposals* ||
+| **7**: Oct 7, 9 | 12: Lab 04: Importing, cleaning data<br/>*Project final groups*| 13: Lab 04 ||
 | **8**: Oct 14, 16 | 14: Lab 05 numeric summary, apply| 15: Lab 05| |
 | **9**: Oct 21, 23 | 16: Lab 06 Base graphics|  17:Lab 06| |
 | **10**: Oct 28, 30 | 18: Lab 07 Data viz/grammar of graphics (ggplot2)|19: Lab 07 |  |
 | **11**: Nov 4, 6 | 20: **Midterm 2**|  21: **Unit 3 (Simulation and Inference)**| |
 | **12**: Nov 11, 13 | Veteran's Day (no class)|  22: Lab 08 Monte Carlo Studies (Simulation)| |
 | **13**: Nov 18, 20 | 23: Lab 08 | 24: Lab 08| |
-| **14**: Nov 25, 27 | 25: Lab 09 Fitting models/prediction | 26: Lab 09| |
-| **15**: Dec 2, 4 | 27: Lab 10 Bootstrap, MLE, MCMC | 28: Lab 10 ||
-| **16**: Dec 9, 11 | 29: Projects poster session/celebration | Prep Day (no class) | |
+| **14**: Nov 25, 27 | 25: Lab 09 Fitting models/prediction | 26: Lab 09<br/>*Project near-final due*| |
+| **15**: Dec 2, 4 | 27: Lab 10 Bootstrap, MLE, MCMC | 28: Lab 10<br/>*Projects due* ||
+| **16**: Dec 9, 11 | 29: **Projects poster session**/celebration | Prep Day (no class) | |
 | **17**: Dec 16, 18 | Finals week (no class) |  **No meeting during final exam period** |
 
 # Project resourcs
