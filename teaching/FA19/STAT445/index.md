@@ -26,7 +26,7 @@ exclude: true
 - Please see this page for a [Review of Basic Statistical Concepts](https://onlinecourses.science.psu.edu/statprogram/review_of_basic_statistics){:target="_blank"}.
 - Check my [resources page](/resources/){:target="_blank"} for additional useful (I hope) information.
 
-# Rubrics, checklists, templates
+# Rubrics, checklists, and templates
 
 - [Lab rubric](https://github.com/grizant/STAT445/blob/master/rubrics/lab_rubric.pdf)
 - [Lab checklist](https://github.com/grizant/STAT445/blob/master/checklists/lab_checklist.pdf)
