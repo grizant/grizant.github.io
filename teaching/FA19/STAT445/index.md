@@ -52,13 +52,13 @@ For other important dates see the UNR [2019-2020 Calendar](https://www.unr.edu/a
 | **8**: Oct 14, 16 | 14: EDA numerical summary, more apply| 15: Lab 05|[14_eda_numeric_startLab05.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/14_eda_numeric_startLab05.Rmd){:target="_blank"}<br/>[14_eda_numeric_startLab05.html](14_eda_numeric_startLab05.html){:target="_blank"}<br/>[15_eda_numeric_continueLab05.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/15_eda_numeric_continueLab05.Rmd){:target="_blank"}<br/>[15_eda_numeric_continueLab05.html](15_eda_numeric_continueLab05.html){:target="_blank"}<br/>[lab_05_numeric_explore_apply.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_05_numeric_explore_apply.Rmd){:target="_blank"}<br/>[lab_05_numeric_explore_apply.html](lab_05_numeric_explore_apply.html){:target="_blank"} |
 | **9**: Oct 21, 23 | 16: Lab 06 Base graphics|  17:Lab 06|[16_base_graphics_startLab06.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/16_base_graphics_startLab06.Rmd){:target="_blank"}<br/>[16_base_graphics_startLab06.html](16_base_graphics_startLab06.html){:target="_blank"}<br/>[17_base_graphics_continueLab06.Rmd](https://github.com/grizant/STAT445/blob/master/meeting_agendas/17_base_graphics_continueLab06.Rmd){:target="_blank"}<br/>[17_base_graphics_continueLab06.html](17_base_graphics_continueLab06.html){:target="_blank"}<br/>[lab_06_base_graphics.Rmd](https://github.com/grizant/STAT445/blob/master/labs/lab_06_base_graphics.Rmd){:target="_blank"}<br/>[lab_06_base_graphics.html](lab_06_base_graphics.html){:target="_blank"}  |
 | **10**: Oct 28, 30 | 18: Lab 07 Data viz/grammar of graphics (ggplot2)|19: Lab 07 |  |
-| **11**: Nov 4, 6 | 20: **Midterm 2**|  21: **Unit 3 (Simulation and Inference)**| |
-| **12**: Nov 11, 13 | Veteran's Day (no class)|  22: Lab 08 Monte Carlo Studies (Simulation)| |
-| **13**: Nov 18, 20 | 23: Lab 08 | 24: Lab 08| |
-| **14**: Nov 25, 27 | 25: Lab 09 Fitting models/prediction | 26: Lab 09<br/>*Project near-final due*| |
-| **15**: Dec 2, 4 | 27: Lab 10 Bootstrap, MLE, MCMC | 28: Lab 10<br/>*Projects due* ||
+| **11**: Nov 4, 6 | 20: **Midterm 2**|  21: **Unit 3 (Simulation and Inference)**<br/>Monte Carlo Studies (Simulation), Lab 08 | Check Canvas for files |
+| **12**: Nov 11, 13 | Veteran's Day (no class)|  22:Randomization Tests, Lab 08| |
+| **13**: Nov 18, 20 | 23: Fitting models, Lab 08/09| 24: Simulating to check model, Lab 08/09| |
+| **14**: Nov 25, 27 | 25: Prediction, Lab 09 | 26: MLE, optim , Lab 09<br/>*Project near-final due*| |
+| **15**: Dec 2, 4 | 27: MCMC, Lab 10 Bootstrap, MLE, MCMC | 28: Catch up/Misc., Lab 10<br/>*Projects due* ||
 | **16**: Dec 9, 11 | 29: **Projects poster session**/celebration | Prep Day (no class) | |
-| **17**: Dec 16, 18 | Finals week (no class) |  **No meeting during final exam period** |
+| **17**: Dec 16, 18 | Finals week (no class) |  **No meeting during final exam period** |  
 
 # Project resourcs
 

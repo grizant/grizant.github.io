@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: A. Grant Schissler, Statistician
-email: aschissler at unr dot edu
+email: aschissler at unr dot edu 
 description: >- # this means to ignore newlines until "baseurl:"
-  You've found my homepage. I'm an Assistant Professor of Statistics in the Department of Mathematics & Statistics at the University of Nevada, Reno. My research interests are driven by interdisciplinary problems, often in the biomedical domain. Recently, I've help to build statistical informatics tools that allow clinical researchers to interpret molecular data, on the scale of individual patients (aiming to conduct precision medicine). Common themes in the course of these projects include large-scale hypothesis testing, high dimensionality, massively-parallel computing (including GPU acceleration), knowledgebase integration, multivariate statistics, Bayesian analysis, and clustering.
+  I'm an Asst. Prof. of Statistics in the Department of Math & Stats at the University of Nevada, Reno. My research interests are driven by interdisciplinary problems, often in the biomedical domain. My interests include Bayesian modeling, large-scale (high dimensional) inference, nof1 designs, massively-parallel computing (GPU), multivariate, RNA-seq, and simulation. Accessibility Comment. Not all of this site and external links are fully accessible. I'm working on it, but in the meantime please contact me if you need a more accessible version. For further assistance, please email accessibility at unr dot edu.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://www.grantschissler.com
 twitter_username: GSchissler
