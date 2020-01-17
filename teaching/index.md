@@ -3,13 +3,17 @@ layout: page
 title: Teaching
 ---
 
-## Fall 2019
+## Spring 2020
 
-## [STAT 445-645 Intro to Statistical Computing](FA19/STAT445/)
-
-Statistical computing in R including statistical inference via Monte Carlo.
+## [STAT 446-646 Intro to Bayesian Statistics](SP20/STAT446/)
 
 ## Previous courses
+
+### Fall 2019
+
+#### [STAT 445-645 Intro to Statistical Computing](FA19/STAT445/)
+
+Statistical computing in R including statistical inference via Monte Carlo.
 
 ### Spring 2019
 
